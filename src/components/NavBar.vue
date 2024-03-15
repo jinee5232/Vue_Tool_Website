@@ -3,7 +3,7 @@
   <div class="header" :class="[scrollPosition >= 120 ? 'shrink' : 'isTop']">
     <div class="wrap">
       <div class="logo">
-        <router-link to="//Vue_Tool_Website/">
+        <router-link to="/Vue_Tool_Website/">
           <img
             class="meow-logo"
             src=""
@@ -15,7 +15,7 @@
       <nav>
         <ul class="menu">
           <li>
-            <router-link to="/">首頁</router-link>
+            <router-link to="/Vue_Tool_Website/">首頁</router-link>
           </li>
           <li><router-link to="/DGraphicPage">平面美編</router-link></li>
           <li><router-link to="/DCssPage">CSS樣式</router-link></li>

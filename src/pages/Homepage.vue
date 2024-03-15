@@ -17,7 +17,7 @@ import SvgHahow from "../../public/SVG/hahow.svg?component";
 import SvgUdemy from "../../public/SVG/udemy.svg?component";
 import SvgFimga from "../../public/SVG/figma.svg?component";
 import SvgGithub from "../../public/SVG/github.svg?component";
-import WebData from "../assets/webdata.json";
+import WebData from "../../public/webdata.json";
 // import TheIcon from "../components/TheIcon.vue";
 
 export default {
@@ -27,11 +27,11 @@ export default {
     };
   },
   components: {
+    SvgNotion,
+    SvgHahow,
+    SvgUdemy,
     SvgFimga,
     SvgGithub,
-    SvgHahow,
-    SvgNotion,
-    SvgUdemy,
   },
   computed: {
     filteredWebData() {
@@ -40,7 +40,7 @@ export default {
         .map((item) => ({
           url: item.url,
           name: item.name,
-          img: item.img,
+          img: item.img, // 这里的 item.img 应该是对应 SVG 图标的路径，而不是组件名
           info: item.info,
           subType:
             typeof item.type === "string"
@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     fetchWebData() {
-      fetch(WebData)
+      fetch("/public/webdata.json") // 修改为正确的 JSON 文件路径
         .then((response) => response.json())
         .then((data) => {
           this.webData = data;
