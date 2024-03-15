@@ -17,6 +17,7 @@ import SvgHahow from "../../public/SVG/hahow.svg?component";
 import SvgUdemy from "../../public/SVG/udemy.svg?component";
 import SvgFimga from "../../public/SVG/figma.svg?component";
 import SvgGithub from "../../public/SVG/github.svg?component";
+import WebData from "../assets/webdata.json";
 // import TheIcon from "../components/TheIcon.vue";
 
 export default {
@@ -55,7 +56,7 @@ export default {
   },
   methods: {
     fetchWebData() {
-      fetch("/src/assets/webdata.json")
+      fetch(WebData)
         .then((response) => response.json())
         .then((data) => {
           this.webData = data;
