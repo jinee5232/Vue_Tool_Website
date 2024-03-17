@@ -133,6 +133,10 @@ export default {
     this.fetchWebData();
   },
   methods: {
+    getImageUrl(imgPath) {
+      // 使用 require 动态加载图片路径
+      return require("@/assets" + imgPath); // 假设图片存放在 src/assets 目录下
+    },
     fetchWebData() {
       fetch("/Vue_Tool_Website/webdata.json")
         .then((response) => response.json())
