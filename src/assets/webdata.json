@@ -20,7 +20,7 @@
         "url": "https://www.pinterest.com",
         "Bigtype": "靈感",
         "Smalltype": "圖片",
-        "img": "/Vue_Tool_Website/public/images/Pinterst_web.PNG",
+        "img": "../../public/images/Pinterst_web.PNG",
         "info": "Pinterest是一個聚焦於圖片分享和收藏的社交網路平台，用戶可以在上面發現和分享各種創意靈感、優美圖片和有趣的內容。這個平台包含了各種各樣的主題板塊，讓用戶可以輕鬆地探索和保存自己感興趣的內容。"
     },
     {

@@ -4,7 +4,7 @@
         "url": "https://www.awwwards.com",
         "Bigtype": "靈感",
         "Smalltype": "網頁",
-        "img": "/Vue_Tool_Website/public/images/Awwards_web.PNG",
+        "img": "../../public/images/Awwards_web.PNG",
         "info": "Awwwards 是一個來自日本的網頁設計平台，提供了許多優秀的網站範例與靈感。這個平台匯集了來自全球各地的設計師，展示他們的創意和技術，為網頁設計者提供了一個學習和靈感的寶庫。"
     },
     {
@@ -60,7 +60,7 @@
         "url": "https://coolors.co/?ref=63f4340c1d28f3000a082add",
         "Bigtype": "美編",
         "Smalltype": "配色",
-        "img": "/Vue_Tool_Website/public/images/COOLORS_web.PNG",
+        "img": "../../public/images/COOLORS_web.PNG",
         "info": "Coolors.co 是一個提供豐富配色方案的網站，幫助使用者輕鬆創建精美的色彩組合。透過其直觀的界面和大量的色彩選項，您可以快速找到完美的配色方案，滿足各種設計需求。"
     },
     {
