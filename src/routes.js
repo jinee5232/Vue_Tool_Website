@@ -18,17 +18,17 @@ const routes = [
     component: DInspiration,
   },
   {
-    path: "/Vue_Tool_Website/DGraphicPage",
+    path: "/DGraphicPage",
     name: "DGraphic",
     component: DGraphic,
   },
   {
-    path: "/Vue_Tool_Website/DCssPage",
+    path: "/DCssPage",
     name: "DCss",
     component: DCss,
   },
   {
-    path: "/Vue_Tool_Website/OtherToolPage",
+    path: "/OtherToolPage",
     name: "OtherTool",
     component: OtherTool,
   },

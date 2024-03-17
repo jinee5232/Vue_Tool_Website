@@ -21,22 +21,16 @@
             <router-link to="/Vue_Tool_Website/">首頁</router-link>
           </li>
           <li>
-            <router-link to="/Vue_Tool_Website/DGraphicPage"
-              >平面美編</router-link
-            >
+            <router-link to="/DGraphicPage">平面美編</router-link>
           </li>
           <li>
-            <router-link to="/Vue_Tool_Website/DCssPage">CSS樣式</router-link>
+            <router-link to="/DCssPage">CSS樣式</router-link>
           </li>
           <li>
-            <router-link to="/Vue_Tool_Website/DInspirationPage"
-              >靈感</router-link
-            >
+            <router-link to="/DInspirationPage">靈感</router-link>
           </li>
           <li>
-            <router-link to="/Vue_Tool_Website/OtherToolPage"
-              >更多工具</router-link
-            >
+            <router-link to="/OtherToolPage">更多工具</router-link>
           </li>
         </ul>
       </nav>
