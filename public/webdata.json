@@ -28,7 +28,7 @@
         "url": "https://m3.material.io/",
         "Bigtype": "美編",
         "Smalltype": "layout",
-        "img": "/Vue_Tool_Website/public/images/Material_Design_Web.PNG",
+        "img": "@/assets/images/Material_Design_Web.PNG",
         "info": "Material Design 是由 Google 推出的設計系統，旨在提供一致且美觀的用戶體驗。它結合了科技、美學和功能性，將物質的特性和虛擬界面結合，提供了一套簡潔、直觀的設計準則，適用於各種平台和裝置。"
     },
     {
@@ -36,7 +36,7 @@
         "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
         "Bigtype": "美編",
         "Smalltype": "layout",
-        "img": "/Vue_Tool_Website/public/images/Designing for iOS.PNG",
+        "img": "./images/Designing for iOS.PNG",
         "info": "Apple 開發者網站提供 iOS 人機介面指南，助您打造符合 Apple 標準的 iOS 應用程式設計。"
     },
     {
