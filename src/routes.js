@@ -13,7 +13,7 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/Vue_Tool_Website/DInspirationPage",
+    path: "/DInspirationPage",
     name: "DInspiration",
     component: DInspiration,
   },
