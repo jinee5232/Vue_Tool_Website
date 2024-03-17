@@ -1,6 +1,9 @@
 <template>
   <!-- :class="[scrollPosition >= 120 ? 'shrink' : 'isTop']" -->
-  <div class="header" :class="[scrollPosition >= 120 ? 'shrink' : 'isTop']">
+  <div
+    class="header"
+    :class="[navClass, scrollPosition >= 120 ? 'shrink' : 'isTop']"
+  >
     <div class="wrap">
       <div class="logo">
         <router-link to="/Vue_Tool_Website/">
@@ -46,10 +49,27 @@
 export default {
   data() {
     return {
+      navClass: "default-nav", // 默认样式
       scrollPosition: 0, // 初始化滚动位置为 0
     };
   },
+  watch: {
+    $route() {
+      this.updateNavClass();
+    },
+  },
+  created() {
+    this.updateNavClass();
+  },
   methods: {
+    updateNavClass() {
+      // 根据当前路由路径更新导航栏样式
+      if (this.$route.path === "/Vue_Tool_Website/") {
+        this.navClass = "page1-nav";
+      } else {
+        this.navClass = "default-nav";
+      }
+    },
     updateScroll() {
       this.scrollPosition = window.scrollY;
     },
@@ -393,6 +413,12 @@ header nav {
 }
 .header.shrink {
   padding: 10px 0;
-  background-color: rgb(31, 24, 133);
+  background-color: rgb(73, 61, 240);
+}
+.default-nav {
+  background-color: #e9545d;
+}
+.page1-nav {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 </style>
