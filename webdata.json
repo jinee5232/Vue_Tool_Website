@@ -52,7 +52,7 @@
         "url": "https://colorhunt.co/",
         "Bigtype": "美編",
         "Smalltype": "配色",
-        "img": "/Vue_Tool_Website/public/images/ColorHunt_web.PNG",
+        "img": "./images/ColorHunt_web.PNG",
         "info": "Colorhunt 是一個提供精心挑選的配色方案的網站，擁有各種風格和主題的色彩選擇。從簡約到豐富，從明亮到柔和，Colorhunt 提供了豐富的選擇，讓您輕鬆找到適合您設計需求的理想配色方案"
     },
     {
@@ -60,7 +60,7 @@
         "url": "https://coolors.co/?ref=63f4340c1d28f3000a082add",
         "Bigtype": "美編",
         "Smalltype": "配色",
-        "img": "../../public/images/COOLORS_web.PNG",
+        "img": "./images/COOLORS_web.PNG",
         "info": "Coolors.co 是一個提供豐富配色方案的網站，幫助使用者輕鬆創建精美的色彩組合。透過其直觀的界面和大量的色彩選項，您可以快速找到完美的配色方案，滿足各種設計需求。"
     },
     {
@@ -108,7 +108,7 @@
         "url": "https://dev.to/webdeasy/top-20-css-buttons-animations-f41",
         "Bigtype": "CSS",
         "Smalltype": "button",
-        "img": "/Vue_Tool_Website/public/images/DEV_TOPbutton_web.PNG",
+        "img": "./images/DEV_TOPbutton_web.PNG",
         "info": "這個網站提供了各種令人驚豔的 CSS 按鈕動畫，讓您的網站按鈕更加生動有趣。"
     },
     {
