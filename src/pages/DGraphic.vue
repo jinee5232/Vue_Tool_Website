@@ -130,7 +130,7 @@ export default {
   },
   methods: {
     fetchWebData() {
-      fetch("/webdata.json")
+      fetch("public/webdata.json")
         .then((response) => response.json())
         .then((data) => {
           this.webData = data;
