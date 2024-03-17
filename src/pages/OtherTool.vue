@@ -31,18 +31,18 @@ export default {
   computed: {
     filteredWebData() {
       return this.webData
-        .filter((item) => item.type.includes("Other"))
+        .filter((item) => item.Bigtype.includes("Other"))
         .map((item) => ({
           url: item.url,
           name: item.name,
           img: item.img,
           info: item.info,
-          subType:
-            typeof item.type === "string"
-              ? item.type.split("、")[1]
-              : Array.isArray(item.type)
-              ? item.type.join("、").split("、")[1]
-              : item.type,
+          subType: item.Smalltype,
+          // typeof item.type === "string"
+          //   ? item.type.split("、")[1]
+          //   : Array.isArray(item.type)
+          //   ? item.type.join("、").split("、")[1]
+          //   : item.type,
         }));
     },
   },
