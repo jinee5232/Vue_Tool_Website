@@ -60,7 +60,11 @@
           >
             <a :href="item.url" target="_blank">
               <div class="card-imgbox">
-                <img :src="item.img" alt="Card Image" class="card-img" />
+                <img
+                  :src="getImgUrl(item.img)"
+                  alt="Card Image"
+                  class="card-img"
+                />
                 <p class="card-typeitem2">{{ item.subType }}</p>
               </div>
 
