@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     fetchWebData() {
-      fetch("public/webdata.json")
+      fetch("../assets/webdata.json")
         .then((response) => response.json())
         .then((data) => {
           this.webData = data;
