@@ -60,11 +60,7 @@
           >
             <a :href="item.url" target="_blank">
               <div class="card-imgbox">
-                <img
-                  :src="getImgUrl(item.img)"
-                  alt="Card Image"
-                  class="card-img"
-                />
+                <img :src="item.img" alt="Card Image" class="card-img" />
                 <p class="card-typeitem2">{{ item.subType }}</p>
               </div>
 
@@ -133,10 +129,6 @@ export default {
     this.fetchWebData();
   },
   methods: {
-    getImageUrl(imgPath) {
-      // 使用 require 动态加载图片路径
-      return require("@/assets" + imgPath); // 假设图片存放在 src/assets 目录下
-    },
     fetchWebData() {
       fetch("/Vue_Tool_Website/webdata.json")
         .then((response) => response.json())
