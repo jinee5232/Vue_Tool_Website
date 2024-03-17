@@ -21,7 +21,7 @@
             <router-link to="/Vue_Tool_Website/">首頁</router-link>
           </li>
           <li>
-            <router-link to=" /Vue_Tool_Website/DGraphicPage"
+            <router-link to="/Vue_Tool_Website/DGraphicPage"
               >平面美編</router-link
             >
           </li>
