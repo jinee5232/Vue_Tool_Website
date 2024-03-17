@@ -58,7 +58,7 @@ export default {
   methods: {
     updateNavClass() {
       // 根据当前路由路径更新导航栏样式
-      if (this.$route.path === "/Vue_Tool_Website/") {
+      if (this.$route.path === "/") {
         this.navClass = "page1-nav";
       } else {
         this.navClass = "default-nav";
