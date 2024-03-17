@@ -108,7 +108,7 @@
         "url": "https://dev.to/webdeasy/top-20-css-buttons-animations-f41",
         "Bigtype": "CSS",
         "Smalltype": "button",
-        "img": "./images/DEV_TOPbutton_web.PNG",
+        "img": "../assets/images/DEV_TOPbutton_web.PNG",
         "info": "這個網站提供了各種令人驚豔的 CSS 按鈕動畫，讓您的網站按鈕更加生動有趣。"
     },
     {
@@ -132,7 +132,7 @@
         "url": "https://www.irasutoya.com/",
         "Bigtype": "美編",
         "Smalltype": "圖片素材",
-        "img": "/Vue_Tool_Website/public/images/irasutoya_web.PNG",
+        "img": "../assets/images/irasutoya_web.PNG",
         "info": "提供免費的高品質插畫和圖像素材，涵蓋多種主題和風格，適合用於設計、印刷和網路用途。"
     },
     {
