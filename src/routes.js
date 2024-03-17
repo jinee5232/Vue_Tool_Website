@@ -4,7 +4,11 @@ import DGraphic from "./pages/DGraphic.vue";
 import DCss from "./pages/DCss.vue";
 import DInspiration from "./pages/DInspiration.vue";
 import OtherTool from "./pages/OtherTool.vue";
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+} from "vue-router";
 
 const routes = [
   {
@@ -35,7 +39,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return {
