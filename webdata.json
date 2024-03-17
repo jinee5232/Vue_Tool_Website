@@ -4,7 +4,7 @@
         "url": "https://www.awwwards.com",
         "Bigtype": "靈感",
         "Smalltype": "網頁",
-        "img": "../../public/images/Awwards_web.PNG",
+        "img": "../assets/images/Awwards_web.PNG",
         "info": "Awwwards 是一個來自日本的網頁設計平台，提供了許多優秀的網站範例與靈感。這個平台匯集了來自全球各地的設計師，展示他們的創意和技術，為網頁設計者提供了一個學習和靈感的寶庫。"
     },
     {
@@ -12,7 +12,7 @@
         "url": "https://webdesignclip.com",
         "Bigtype": "靈感",
         "Smalltype": "網頁",
-        "img": "./images/WebDesignClip_web.PNG",
+        "img": "../assets/images/WebDesignClip_web.PNG",
         "info": "WebDesignClip提供豐富的網頁設計資源，專注於分享來自美國的網頁設計作品。這個平台匯集了眾多具啟發性的網頁設計案例，為設計師提供了無限的靈感和學習機會。"
     },
     {
@@ -20,7 +20,7 @@
         "url": "https://www.pinterest.com",
         "Bigtype": "靈感",
         "Smalltype": "圖片",
-        "img": "./images/Pinterst_web.PNG",
+        "img": "../assets/images/Pinterst_web.PNG",
         "info": "Pinterest是一個聚焦於圖片分享和收藏的社交網路平台，用戶可以在上面發現和分享各種創意靈感、優美圖片和有趣的內容。這個平台包含了各種各樣的主題板塊，讓用戶可以輕鬆地探索和保存自己感興趣的內容。"
     },
     {
@@ -28,7 +28,7 @@
         "url": "https://m3.material.io/",
         "Bigtype": "美編",
         "Smalltype": "layout",
-        "img": "https://jinee5232.github.io/Vue_Tool_Website/public/images/ColorHunt_web.PNG",
+        "img": "@/assets/images/ColorHunt_web.PNG",
         "info": "Material Design 是由 Google 推出的設計系統，旨在提供一致且美觀的用戶體驗。它結合了科技、美學和功能性，將物質的特性和虛擬界面結合，提供了一套簡潔、直觀的設計準則，適用於各種平台和裝置。"
     },
     {
@@ -36,7 +36,7 @@
         "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
         "Bigtype": "美編",
         "Smalltype": "layout",
-        "img": "./images/Designing for iOS.PNG",
+        "img": "@/assets/images/Designing for iOS.PNG",
         "info": "Apple 開發者網站提供 iOS 人機介面指南，助您打造符合 Apple 標準的 iOS 應用程式設計。"
     },
     {
@@ -44,7 +44,7 @@
         "url": "https://ant.design/index-cn",
         "Bigtype": "美編",
         "Smalltype": "layout",
-        "img": "./images/AntDesign_web.PNG",
+        "img": "@/assets/images/AntDesign_web.PNG",
         "info": "Ant Design是一個優秀的UI設計框架，專為React應用程序而設。它提供了一個豐富的組件庫和設計模式，使開發者可以輕鬆構建美觀且易於使用的界面。其設計風格現代簡潔，並且支持響應式設計，適用於各種設備和尺寸。"
     },
     {
@@ -52,7 +52,7 @@
         "url": "https://colorhunt.co/",
         "Bigtype": "美編",
         "Smalltype": "配色",
-        "img": "./images/ColorHunt_web.PNG",
+        "img": "@/assets/images/ColorHunt_web.PNG",
         "info": "Colorhunt 是一個提供精心挑選的配色方案的網站，擁有各種風格和主題的色彩選擇。從簡約到豐富，從明亮到柔和，Colorhunt 提供了豐富的選擇，讓您輕鬆找到適合您設計需求的理想配色方案"
     },
     {
@@ -60,7 +60,7 @@
         "url": "https://coolors.co/?ref=63f4340c1d28f3000a082add",
         "Bigtype": "美編",
         "Smalltype": "配色",
-        "img": "./images/COOLORS_web.PNG",
+        "img": "@/assets/images/COOLORS_web.PNG",
         "info": "Coolors.co 是一個提供豐富配色方案的網站，幫助使用者輕鬆創建精美的色彩組合。透過其直觀的界面和大量的色彩選項，您可以快速找到完美的配色方案，滿足各種設計需求。"
     },
     {
@@ -68,7 +68,7 @@
         "url": "https://color.adobe.com/ja/create/color-wheel",
         "Bigtype": "美編",
         "Smalltype": "配色",
-        "img": "./images/AdobeColor_web.PNG",
+        "img": "@/assets/images/AdobeColor_web.PNG",
         "info": "Adobe Color是一個功能強大的網站，提供多種色彩工具和調色板，讓用戶可以輕鬆創建美麗的配色方案。無論是設計師、藝術家還是任何需要色彩靈感的人，都可以在這個平台上找到所需的工具和資源。"
     },
     {
@@ -76,7 +76,7 @@
         "url": "https://www.eggradients.com/",
         "Bigtype": "美編",
         "Smalltype": "配色",
-        "img": "./images/Eggradients_Web.PNG",
+        "img": "@/assets/images/Eggradients_Web.PNG",
         "info": "提供漸層色票的網站，它提供了各種豐富的漸層色彩組合，讓使用者可以輕鬆地找到並應用於設計項目中。这些漸層色彩不僅色彩豐富，而且設計感強烈，可應用於各種設計領域。"
     },
     {
@@ -84,7 +84,7 @@
         "url": "https://webgradients.com/",
         "Bigtype": "美編",
         "Smalltype": "配色",
-        "img": "./images/webgradients_web.PNG",
+        "img": "@/assets/images/webgradients_web.PNG",
         "info": "提供漸層色票的網站，提供了各種漸層色彩的選擇，可用於網頁設計和應用程式開發。這些漸層色彩精心挑選，讓您可以輕鬆地為您的項目添加吸引人的視覺效果"
     },
     {
@@ -92,7 +92,7 @@
         "url": "https://tinypng.com/",
         "Bigtype": "美編",
         "Smalltype": "壓縮",
-        "img": "./images/tinify_web.PNG",
+        "img": "@/assets/images/tinify_web.PNG",
         "info": "用於圖像壓縮的工具，可以幫助用戶快速壓縮圖片文件，減少文件大小而不損失品質。這個工具對於網頁開發者和設計師來說非常寶貴，能夠幫助他們優化網站性能和加快加載速度。"
     },
     {
@@ -100,7 +100,7 @@
         "url": "https://getcssscan.com/css-box-shadow-examples",
         "Bigtype": "CSS",
         "Smalltype": "boxshadow",
-        "img": "./images/CSS_Scan_Web.PNG",
+        "img": "@/assets/images/CSS_Scan_Web.PNG",
         "info": "GetCSSScan 提供了各種 CSS Box Shadow 的實例，讓您輕鬆獲得網站設計所需的陰影效果。"
     },
     {
@@ -108,7 +108,7 @@
         "url": "https://dev.to/webdeasy/top-20-css-buttons-animations-f41",
         "Bigtype": "CSS",
         "Smalltype": "button",
-        "img": "../assets/images/DEV_TOPbutton_web.PNG",
+        "img": "@/assets/images/DEV_TOPbutton_web.PNG",
         "info": "這個網站提供了各種令人驚豔的 CSS 按鈕動畫，讓您的網站按鈕更加生動有趣。"
     },
     {
@@ -116,7 +116,7 @@
         "url": "https://neilpatel.com/ubersuggest/",
         "Bigtype": "Other",
         "Smalltype": "SEO",
-        "img": "../images/Ubersuggest_web.PNG",
+        "img": "@/assets/images/Ubersuggest_web.PNG",
         "info": "Ubersuggest是一個強大的SEO工具，可提供關鍵字研究、競爭分析和網站優化建議。透過詳盡的數據分析和智慧型建議，幫助用戶提升其網站在搜索引擎中的排名，提升流量和品牌曝光。"
     },
     {
@@ -124,7 +124,7 @@
         "url": "https://ahrefs.com/",
         "Bigtype": "Other",
         "Smalltype": "SEO",
-        "img": "./images/Ahrefs_web.PNG",
+        "img": "@/assets/images/Ahrefs_web.PNG",
         "info": "Ahrefs是一個全面的SEO工具，提供關鍵詞研究、競爭分析、排名追蹤等功能，幫助用戶優化網站並提高搜索引擎排名。"
     },
     {
@@ -132,7 +132,7 @@
         "url": "https://www.irasutoya.com/",
         "Bigtype": "美編",
         "Smalltype": "圖片素材",
-        "img": "./images/irasutoya_web.PNG",
+        "img": "@/assets/images/irasutoya_web.PNG",
         "info": "提供免費的高品質插畫和圖像素材，涵蓋多種主題和風格，適合用於設計、印刷和網路用途。"
     },
     {
