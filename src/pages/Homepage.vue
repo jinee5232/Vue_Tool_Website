@@ -4,7 +4,7 @@
       <div v-for="(item, index) in filteredWebData" :key="index" class="card2">
         <!-- <img :src="item.img" alt="Card Image" class="card-img" /> -->
         <a :href="item.url" target="_blank">
-          <component :is="item.img" class="SVGclore" />
+          <component :is="item.svg" class="SVGclore" />
         </a>
       </div>
     </div>
@@ -17,7 +17,6 @@ import SvgHahow from "../../public/SVG/hahow.svg?component";
 import SvgUdemy from "../../public/SVG/udemy.svg?component";
 import SvgFimga from "../../public/SVG/figma.svg?component";
 import SvgGithub from "../../public/SVG/github.svg?component";
-import WebData from "../../public/webdata.json";
 // import TheIcon from "../components/TheIcon.vue";
 
 export default {
@@ -36,18 +35,12 @@ export default {
   computed: {
     filteredWebData() {
       return this.webData
-        .filter((item) => item.type.includes("辦公"))
+        .filter((item) => item.Bigtype.includes("辦公"))
         .map((item) => ({
           url: item.url,
           name: item.name,
-          img: item.img, // 这里的 item.img 应该是对应 SVG 图标的路径，而不是组件名
+          svg: item.svg, // 这里的 item.img 应该是对应 SVG 图标的路径，而不是组件名
           info: item.info,
-          subType:
-            typeof item.type === "string"
-              ? item.type.split("、")[1]
-              : Array.isArray(item.type)
-              ? item.type.join("、").split("、")[1]
-              : item.type,
         }));
     },
   },
@@ -56,7 +49,7 @@ export default {
   },
   methods: {
     fetchWebData() {
-      fetch("/public/webdata.json") // 修改为正确的 JSON 文件路径
+      fetch("/webdata.json")
         .then((response) => response.json())
         .then((data) => {
           this.webData = data;

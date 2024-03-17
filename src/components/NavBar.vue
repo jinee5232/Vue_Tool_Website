@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import { inject } from "vue";
 export default {
   data() {
     return {
@@ -54,15 +53,6 @@ export default {
   mounted() {
     // run the function when the component's mount
     window.addEventListener("scroll", this.updateScroll);
-  },
-  setup() {
-    const openSpon = inject("openSpon");
-    const OpenSponer = () => {
-      openSpon();
-    };
-    return {
-      OpenSponer,
-    };
   },
 };
 </script>
