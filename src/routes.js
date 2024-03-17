@@ -13,22 +13,22 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/Vue_Tool_Website//DInspirationPage",
+    path: "/Vue_Tool_Website/DInspirationPage",
     name: "DInspiration",
     component: DInspiration,
   },
   {
-    path: "/Vue_Tool_Website//DGraphicPage",
+    path: "/Vue_Tool_Website/DGraphicPage",
     name: "DGraphic",
     component: DGraphic,
   },
   {
-    path: "/Vue_Tool_Website//DCssPage",
+    path: "/Vue_Tool_Website/DCssPage",
     name: "DCss",
     component: DCss,
   },
   {
-    path: "/Vue_Tool_Website//OtherToolPage",
+    path: "/Vue_Tool_Website/OtherToolPage",
     name: "OtherTool",
     component: OtherTool,
   },
