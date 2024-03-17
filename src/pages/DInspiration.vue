@@ -128,7 +128,7 @@ export default {
   },
   methods: {
     fetchWebData() {
-      fetch("/public/webdata.json")
+      fetch("/Vue_Tool_Website/public/webdata.json")
         .then((response) => response.json())
         .then((data) => {
           this.webData = data;
