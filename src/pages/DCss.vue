@@ -7,7 +7,7 @@
             <img :src="item.img" alt="Card Image" class="card-img" />
             <p class="card-typeitem2">{{ item.subType }}</p>
           </div>
-          <div class="card-infobox">
+          <div class="card-infobox" :class="{ opacityIN: animate }">
             <div class="card-intrbox2">
               <h2 class="card-title2">{{ item.name }}</h2>
               <p class="card-info">{{ item.info }}</p>
@@ -23,6 +23,7 @@ export default {
   data() {
     return {
       webData: [],
+      animate: false,
     };
   },
   computed: {
@@ -45,8 +46,19 @@ export default {
   },
   mounted() {
     this.fetchWebData();
+    this.handleResize();
   },
   methods: {
+    handleResize() {
+      // 获取窗口宽度
+      const windowWidth = window.innerWidth;
+      // 根据窗口宽度执行动画
+      if (windowWidth <= 767) {
+        this.animate = true;
+      } else {
+        this.animate = false;
+      }
+    },
     fetchWebData() {
       fetch("/Vue_Tool_Website/webdata.json")
         .then((response) => response.json())
@@ -218,8 +230,28 @@ export default {
       top: 0;
       left: 0;
       width: 100%;
-      display: none;
+      opacity: 0;
+      z-index: 5;
       background-color: rgb(255, 255, 255, 0.5);
+      transition-delay: 5s;
+      animation: opacityinto ease-in 5s forwards;
+      .card-info {
+        background-color: #fff;
+      }
+      /* transition-timing-function: 5s;
+      transition: opacityinto 5s ease; */
+    }
+    .opacityIN {
+      opacity: 1;
+      transition: opacityinto 5s ease-in;
+    }
+    @keyframes opacityinto {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   }
 }
