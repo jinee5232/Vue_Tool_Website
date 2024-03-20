@@ -2,21 +2,23 @@
   <div style="margin-top: 200px">
     <div class="card-container">
       <div v-for="(item, index) in filteredWebData" :key="index" class="card">
-        <img :src="item.img" alt="Card Image" class="card-img" />
-        <div class="card-body">
-          <div class="title_type">
-            <h2 class="card-title">{{ item.name }}</h2>
-            <div class="card-Typebox">
-              <p class="card-type">類別：</p>
-              <p class="card-typeitem">{{ item.subType }}</p>
+        <a :href="item.url" target="_blank">
+          <img :src="item.img" alt="Card Image" class="card-img" />
+          <div class="card-body">
+            <div class="title_type">
+              <h2 class="card-title">{{ item.name }}</h2>
+              <div class="card-Typebox">
+                <p class="card-type">類別：</p>
+                <p class="card-typeitem">{{ item.subType }}</p>
+              </div>
+            </div>
+
+            <div class="card-intrbox">
+              <h3>介紹：</h3>
+              <p class="card-info">{{ item.info }}</p>
             </div>
           </div>
-
-          <div class="card-intrbox">
-            <h3>介紹：</h3>
-            <p class="card-info">{{ item.info }}</p>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
