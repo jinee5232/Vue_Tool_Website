@@ -16,8 +16,11 @@ import NavBar from "./components/NavBar.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
-<style scoped>
+<style>
 * {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+*:focus {
+  outline: none;
 }
 </style>

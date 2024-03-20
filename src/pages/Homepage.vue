@@ -63,6 +63,9 @@ export default {
 </script>
 
 <style scoped>
+*:focus {
+  outline: none;
+}
 .SVGclore {
   fill: rgb(255, 255, 255);
   transition: fill 0.3s linear;

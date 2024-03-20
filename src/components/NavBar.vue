@@ -86,6 +86,9 @@ export default {
 </script>
 
 <style scoped>
+*:focus {
+  outline: none;
+}
 .menuOpenBtn:after,
 .menuOpenBtn:before,
 .menuOpenBtn span,

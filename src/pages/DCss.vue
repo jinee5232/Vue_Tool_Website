@@ -3,18 +3,13 @@
     <div class="card-container">
       <div v-for="(item, index) in filteredWebData" :key="index" class="card">
         <a :href="item.url" target="_blank">
-          <img :src="item.img" alt="Card Image" class="card-img" />
-          <div class="card-body">
-            <div class="title_type">
-              <h2 class="card-title">{{ item.name }}</h2>
-              <div class="card-Typebox">
-                <p class="card-type">類別：</p>
-                <p class="card-typeitem">{{ item.subType }}</p>
-              </div>
-            </div>
-
-            <div class="card-intrbox">
-              <h3>介紹：</h3>
+          <div class="card-imgbox">
+            <img :src="item.img" alt="Card Image" class="card-img" />
+            <p class="card-typeitem2">{{ item.subType }}</p>
+          </div>
+          <div class="card-infobox">
+            <div class="card-intrbox2">
+              <h2 class="card-title2">{{ item.name }}</h2>
               <p class="card-info">{{ item.info }}</p>
             </div>
           </div>
@@ -71,18 +66,37 @@ export default {
   flex-wrap: wrap;
   width: 80vw;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+/* .card-container2 {
+  display: flex;
+  flex-wrap: nowrap; 防止換行
+  overflow-x: auto; 橫向滾動
+  避免最後一個卡片被遮擋
+} */
+.swiper {
+  width: 80vw;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .card {
-  width: 500px;
+  width: 30%;
   min-width: 300px;
-  margin: 30px;
+  margin: 30px 0;
+  margin-right: 30px;
   border: 1px solid #ccc;
   border-radius: 10px;
   transition: box-shadow 0.3s linear;
   animation: card 3s forwards;
   animation-duration: 2s;
+  a {
+    color: #000;
+    text-decoration: none;
+    outline: none;
+  }
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
       rgba(0, 0, 0, 0.05) 0px 5px 10px;
@@ -103,12 +117,6 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.card-title {
-  margin: 0;
-  font-size: 32px;
-  line-height: 50px;
-  margin-bottom: 10px;
-}
 .card-Typebox {
   display: flex;
   .card-type {
@@ -124,28 +132,83 @@ export default {
     border: 1px solid green;
   }
 }
-.card-intrbox {
+
+.card-imgbox {
   width: 100%;
-  padding: 5px;
-  h3 {
-    font-size: 24px;
-    margin-bottom: 5px;
-    line-height: 30px;
+  position: relative;
+  .card-typeitem2 {
+    position: absolute;
+    bottom: 20px;
+    font-weight: 600;
+    right: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #277988;
+    font-size: 18px;
+    padding: 0px 5px;
+    line-height: 28px;
   }
+}
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.card-intrbox2 {
+  width: 90%;
+  margin: auto;
+  margin: 30px auto;
+  padding: 5px;
+  position: relative;
+  border: 2px solid #000;
   .card-info {
     text-indent: 50px;
+    padding: 10px;
     font-size: 20px;
     line-height: 30px;
     font-weight: 700;
     letter-spacing: 5px;
+    text-align: left;
+    height: 200px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .card-title2 {
+    font-size: 32px;
+    position: absolute;
+    padding: 0px 10px;
+    top: -20px;
+    left: 10px;
+    background-color: #fff;
   }
 }
-@keyframes card {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@media (max-width: 767px) {
+  .card-container {
+    width: 95vw;
+    .card {
+      width: 100%;
+      margin: 30px 0;
+      border: 1px solid #ccc;
+      display: flex;
+      a {
+        display: flex;
+      }
+    }
+    .card-imgbox {
+      width: 100%;
+      .card-img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+        object-fit: contain;
+      }
+    }
+    .card-infobox {
+      width: 100%;
+      z-index: 10;
+    }
   }
 }
 </style>
