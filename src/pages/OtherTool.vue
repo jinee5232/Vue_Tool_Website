@@ -149,7 +149,7 @@ export default {
 }
 
 .card-intrbox2 {
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin: 30px auto;
   padding: 5px;

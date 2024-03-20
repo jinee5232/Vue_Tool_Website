@@ -154,7 +154,7 @@ export default {
   border-radius: 10px;
 }
 .card-intrbox2 {
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin: 30px auto;
   padding: 5px;
@@ -190,12 +190,20 @@ export default {
       margin: 30px 0;
       border: 1px solid #ccc;
       display: flex;
+      position: relative;
       a {
         display: flex;
+      }
+      &:hover,
+      &:active {
+        .card-infobox {
+          display: block;
+        }
       }
     }
     .card-imgbox {
       width: 100%;
+      min-height: 300px;
       .card-img {
         width: 100%;
         height: auto;
@@ -206,8 +214,12 @@ export default {
       }
     }
     .card-infobox {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      z-index: 10;
+      display: none;
+      background-color: rgb(255, 255, 255, 0.5);
     }
   }
 }

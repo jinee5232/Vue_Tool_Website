@@ -88,13 +88,14 @@ export default {
   display: flex;
   overflow: hidden;
   width: 80vw;
+  flex-wrap: wrap;
   margin: auto;
   justify-content: space-around;
 }
 
 .card2 {
-  width: 800px;
-  padding: 50px;
+  width: 120px;
+  padding: 30px;
   /* min-width: 300px; */
   margin: 30px;
   /* border: 1px solid #ccc; */
@@ -172,6 +173,26 @@ export default {
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .card-container {
+    width: 95vw;
+    margin-top: 50px;
+    .card {
+      width: 100%;
+      margin: 30px 0;
+      border: 1px solid #ccc;
+      display: flex;
+      a {
+        display: flex;
+      }
+    }
+  }
+  .HomeBox {
+    height: auto;
+    min-height: 100vh;
+    background-size: cover;
   }
 }
 </style>

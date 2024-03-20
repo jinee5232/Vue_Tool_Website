@@ -342,7 +342,7 @@ export default {
 }
 
 .card-intrbox2 {
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin: 30px auto;
   padding: 5px;
@@ -356,6 +356,9 @@ export default {
     font-weight: 700;
     letter-spacing: 5px;
     text-align: left;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     height: 200px;
   }
   .card-title2 {

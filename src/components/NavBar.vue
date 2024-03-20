@@ -254,13 +254,13 @@ header nav {
   position: relative;
   display: block;
   padding: 10px 8px;
-  color: #ffffff;
-  font-size: 32px;
+  color: #f4edcc;
+  font-size: 24px;
   font-weight: 600;
 }
 .menu a.current,
 .menu a:hover {
-  color: #307cae;
+  color: #ffffff;
 }
 .menu a.current:before,
 .menu a:hover:before {
@@ -276,7 +276,7 @@ header nav {
   z-index: 1;
   width: 0;
   height: 5px;
-  background-color: #e9545d;
+  background-color: #a4ce95;
 }
 .socialList {
   display: flex;
@@ -329,7 +329,7 @@ header nav {
   height: 2px;
   margin-left: -12px;
   margin-top: 0.5px;
-  background-color: #4974ae;
+  background-color: #ffffff;
 }
 .menuOpenBtn:after,
 .menuOpenBtn:before {
@@ -410,10 +410,10 @@ header nav {
 }
 .header.shrink {
   padding: 10px 0;
-  background-color: rgb(73, 61, 240);
+  background-color: #1b3c73;
 }
 .default-nav {
-  background-color: #e9545d;
+  background-color: #5f5d9c;
 }
 .page1-nav {
   background-color: rgba(0, 0, 0, 0.1);
