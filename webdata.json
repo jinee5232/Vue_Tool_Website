@@ -19,7 +19,7 @@
         "name": "Pinterest",
         "url": "https://www.pinterest.com",
         "Bigtype": "靈感",
-        "Smalltype": "圖片",
+        "Smalltype": "設計",
         "img": "./images/Pinterst_web.PNG",
         "info": "Pinterest是一個聚焦於圖片分享和收藏的社交網路平台，用戶可以在上面發現和分享各種創意靈感、優美圖片和有趣的內容。這個平台包含了各種各樣的主題板塊，讓用戶可以輕鬆地探索和保存自己感興趣的內容。"
     },
@@ -131,7 +131,7 @@
         "name": "いらすとや",
         "url": "https://www.irasutoya.com/",
         "Bigtype": "美編",
-        "Smalltype": "圖片素材",
+        "Smalltype": "向量素材",
         "img": "./images/irasutoya_web.PNG",
         "info": "提供免費的高品質插畫和圖像素材，涵蓋多種主題和風格，適合用於設計、印刷和網路用途。"
     },
@@ -179,5 +179,85 @@
         "img": "",
         "svg": "SvgGithub",
         "info": ""
+    },
+    {
+        "name": "ソコスト",
+        "url": "https://soco-st.com/",
+        "Bigtype": "美編",
+        "Smalltype": "向量素材",
+        "img": "./images/soco_web.PNG",
+        "info": "分為生活、人物、季節／活動等 8 種類別，提供 PNG、SVG、EPS 的格式，網站下方供關鍵詞搜尋。點進所需的插畫頁面後，有儲存功能以便往後搜尋，能還將插圖的部分區域更換為需要的顏色。"
+    },
+    {
+        "name": "イラストセンター",
+        "url": "https://illustcenter.com/",
+        "Bigtype": "美編",
+        "Smalltype": "向量素材",
+        "img": "./images/illustcenter_web.PNG",
+        "info": "插圖線條、顏色溫潤，網站底部有更詳細的分類以便找尋，左側則有人氣插畫可供參考。點進所需的插畫頁面後，下方有相關插畫能延伸搜尋。"
+    },
+    {
+        "name": "Vector Shelf",
+        "url": "https://vectorshelf.com/",
+        "Bigtype": "美編",
+        "Smalltype": "向量素材",
+        "img": "./images/vectorshelf_web.PNG",
+        "info": "插圖為線條感的手繪風，分為飲料、食物、商品、信件等七種類別，點進所需的插畫頁面後，僅一鍵就能下載。"
+    },
+    {
+        "name": "ICOOON MONO",
+        "url": "https://icooon-mono.com/?lang=en",
+        "Bigtype": "美編",
+        "Smalltype": "Icon素材",
+        "img": "./images/Icooon_web.PNG",
+        "info": "在智慧型電腦、手機等裝置的普及，讓 UI/UX 引人注目，於是提供超過 6000 多種的圖標。選擇所需的插圖後，於右側能選擇線條的粗度、線條顏色（黑／白）、檔案格式類型等。"
+    },
+    {
+        "name": "Behance",
+        "url": "https://www.behance.net/",
+        "Bigtype": "靈感",
+        "Smalltype": "設計",
+        "img": "./images/Behance_Web.PNG",
+        "info": "Behance是一個線上平台，旨在讓創意專業人士展示和分享其作品，包括插圖、平面設計、攝影、動畫等。該網站提供了一個獨特的社群環境，讓用戶能夠互相啟發、合作和獲得反饋。"
+    },
+    {
+        "name": "Pexels",
+        "url": "https://www.pexels.com/",
+        "Bigtype": "美編",
+        "Smalltype": "照片素材",
+        "img": "./images/pexels_web.PNG",
+        "info": "Pexels是一個免費的高品質圖片和影片庫，用戶可以在其中找到各種主題的圖片和影片素材，用於個人和商業用途。該網站提供了豐富的內容，讓用戶輕鬆快速地尋找到所需的素材，並且所有的素材都是免費且可以自由使用，無需註冊。"
+    },
+    {
+        "name": "Unsplash",
+        "url": "https://unsplash.com/",
+        "Bigtype": "美編",
+        "Smalltype": "照片素材",
+        "img": "./images/Unsplash_web.PNG",
+        "info": "Unsplash是一個知名的免費高品質圖片庫，提供了大量免費的高解析度照片素材，供個人和商業用途使用。這些照片由全球各地的攝影師提供，涵蓋了各種主題和風格，讓用戶可以輕鬆找到所需的素材。Unsplash的照片可以自由下載、修改和分享，無需註冊。"
+    },
+    {
+        "name": "Freepik",
+        "url": "https://www.freepik.com/",
+        "Bigtype": "美編",
+        "Smalltype": "照片素材",
+        "img": "./images/FreePik_web.PNG",
+        "info": "Freepik是一個提供免費和付費圖形設計資源的平台，其中包括矢量圖形、照片、插圖、圖標、模板等。用戶可以在Freepik上找到各種風格和主題的設計素材，用於個人和商業項目。除了免費素材外，Freepik還提供了Premium訂閱服務，用戶可以獲得更多高品質的獨家素材和功能。"
+    },
+    {
+        "name": "Undraw",
+        "url": "https://undraw.co/illustrations",
+        "Bigtype": "美編",
+        "Smalltype": "向量素材",
+        "img": "./images/Undraw_web.PNG",
+        "info": "Undraw提供免費、可定制的插圖，涵蓋多樣主題和風格，讓使用者可根據需求自由編輯和應用。Undraw的插圖操作簡便，為專案增添個性化與創意。"
+    },
+    {
+        "name": "Feather",
+        "url": "https://feathericons.com/",
+        "Bigtype": "美編",
+        "Smalltype": "Icon素材",
+        "img": "./images/FeatherIcon_web.PNG",
+        "info": "Feather Icons提供免費的開源圖標庫，包含各種風格和主題的簡潔向量圖標，可用於網頁、應用程式等項目中。Feather Icons的圖標設計精簡、易於使用，為專案提供豐富的圖標選擇。"
     }
 ]
