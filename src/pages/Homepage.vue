@@ -175,6 +175,11 @@ export default {
     opacity: 1;
   }
 }
+@media (max-width: 1440px) {
+  .card-container {
+    width: 100vw;
+  }
+}
 @media (max-width: 767px) {
   .card-container {
     width: 95vw;
