@@ -19,6 +19,7 @@ import Footer from "./components/Footer.vue";
 <style>
 * {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
 }
 *:focus {
   outline: none;

@@ -147,9 +147,10 @@ export default {
 </script>
 <style scoped>
 .btn_box {
-  width: 80vw;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 150px;
+  padding-left: 10%;
   margin-bottom: 50px;
   button {
     width: 50px;
@@ -229,7 +230,7 @@ export default {
   flex-wrap: wrap;
   width: 80vw;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 /* .card-container2 {
   display: flex;
@@ -370,6 +371,77 @@ export default {
     top: -20px;
     left: 10px;
     background-color: #fff;
+  }
+}
+@media (max-width: 768px) {
+  .card-container {
+    width: 95vw;
+    .card {
+      width: 100%;
+      margin: 30px 0;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      a {
+        display: flex;
+        flex-direction: column;
+      }
+      &:hover,
+      &:active {
+        .card-infobox {
+          display: block;
+        }
+      }
+    }
+    .card-imgbox {
+      width: 100%;
+      .card-img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+        object-fit: contain;
+      }
+    }
+
+    .card-intrbox2 {
+      width: 95%;
+      margin: 5px auto;
+      padding: 0px;
+      .card-info {
+        padding: 10px 5px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        height: 150px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .card-title2 {
+        font-size: 2rem;
+        color: #277988;
+      }
+    }
+    .card-info {
+      background-color: #fff;
+    }
+    /* transition-timing-function: 5s;
+      transition: opacityinto 5s ease; */
+
+    .opacityIN {
+      opacity: 1;
+      transition: opacityinto 5s ease-in;
+    }
+    @keyframes opacityinto {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 }
 </style>

@@ -73,6 +73,18 @@ export default {
 };
 </script>
 <style scoped>
+.btn_box {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 10%;
+  margin-bottom: 50px;
+  button {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+  }
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +99,6 @@ export default {
   避免最後一個卡片被遮擋
 } */
 .swiper {
-  width: 80vw;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -194,7 +205,7 @@ export default {
     background-color: #fff;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .card-container {
     width: 95vw;
     .card {
@@ -202,9 +213,10 @@ export default {
       margin: 30px 0;
       border: 1px solid #ccc;
       display: flex;
-      position: relative;
+      flex-direction: column;
       a {
         display: flex;
+        flex-direction: column;
       }
       &:hover,
       &:active {
@@ -215,7 +227,6 @@ export default {
     }
     .card-imgbox {
       width: 100%;
-      min-height: 300px;
       .card-img {
         width: 100%;
         height: auto;
@@ -226,15 +237,32 @@ export default {
       }
     }
     .card-infobox {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       opacity: 0;
       z-index: 5;
+      padding: 5px;
       background-color: rgb(255, 255, 255, 0.5);
       transition-delay: 5s;
       animation: opacityinto ease-in 5s forwards;
+      .card-intrbox2 {
+        width: 95%;
+        margin: 5px auto;
+        padding: 0px;
+        .card-info {
+          padding: 10px 5px;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          font-weight: 700;
+          height: 150px;
+          overflow-y: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .card-title2 {
+          font-size: 2rem;
+          color: #277988;
+        }
+      }
       .card-info {
         background-color: #fff;
       }

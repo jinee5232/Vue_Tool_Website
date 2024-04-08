@@ -1,22 +1,46 @@
 <template>
   <!-- :class="[scrollPosition >= 120 ? 'shrink' : 'isTop']" -->
-  <div
-    class="header"
-    :class="[navClass, scrollPosition >= 120 ? 'shrink' : 'isTop']"
-  >
-    <div class="wrap">
-      <div class="logo">
-        <router-link to="/Vue_Tool_Website/">
-          <img
-            class="meow-logo"
-            src=""
-            alt=""
-            :class="[scrollPosition >= 120 ? 'header-logo' : 'logoHigh']"
-          />
-        </router-link>
+  <div class="header_bg">
+    <div
+      class="header"
+      :class="[navClass, scrollPosition >= 120 ? 'shrink' : 'isTop']"
+    >
+      <div class="wrap">
+        <div class="logo">
+          <router-link to="/Vue_Tool_Website/">
+            <img
+              class="meow-logo"
+              src=""
+              alt=""
+              :class="[scrollPosition >= 120 ? 'header-logo' : 'logoHigh']"
+            />
+          </router-link>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li>
+              <router-link to="/">首頁</router-link>
+            </li>
+            <li>
+              <router-link to="/DGraphicPage">平面美編</router-link>
+            </li>
+            <li>
+              <router-link to="/DCssPage">CSS樣式</router-link>
+            </li>
+            <li>
+              <router-link to="/DInspirationPage">靈感</router-link>
+            </li>
+            <li>
+              <router-link to="/OtherToolPage">更多工具</router-link>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="menuOpenBtn" @click="hamOpen = !hamOpen">
+          <span></span>
+        </button>
       </div>
-      <nav>
-        <ul class="menu">
+      <div v-if="hamOpen" class="hameSidebar">
+        <ul>
           <li>
             <router-link to="/">首頁</router-link>
           </li>
@@ -33,8 +57,7 @@
             <router-link to="/OtherToolPage">更多工具</router-link>
           </li>
         </ul>
-      </nav>
-      <button type="button" class="menuOpenBtn"><span></span></button>
+      </div>
     </div>
   </div>
 </template>
@@ -43,6 +66,7 @@
 export default {
   data() {
     return {
+      hamOpen: false,
       navClass: "default-nav", // 默认样式
       scrollPosition: 0, // 初始化滚动位置为 0
     };
@@ -52,10 +76,22 @@ export default {
       this.updateNavClass();
     },
   },
+  destroyed() {
+    window.removeEventListener("resize", this.handleResize);
+  },
   created() {
     this.updateNavClass();
+    window.addEventListener("resize", this.handleResize);
   },
   methods: {
+    handleResize() {
+      // 获取视口宽度
+      const windowWidth = window.innerWidth;
+      // 假设在小于 768px 的视口宽度下将 open 设置为 false
+      if (windowWidth >= 768) {
+        this.hamOpen = false;
+      }
+    },
     updateNavClass() {
       // 根据当前路由路径更新导航栏样式
       if (this.$route.path === "/") {
@@ -86,6 +122,13 @@ export default {
 </script>
 
 <style scoped>
+.header_bg {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 90;
+}
 *:focus {
   outline: none;
 }
@@ -112,6 +155,8 @@ footer .goTop svg,
 }
 .wrap {
   max-width: 68.75em;
+  position: relative;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -125,10 +170,7 @@ body a {
   text-decoration: none;
 }
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 90;
+  position: relative;
   width: 100%;
   /* background-color: #fff; */
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
@@ -157,6 +199,39 @@ header nav {
   justify-content: end;
   align-items: center;
 }
+
+.hameSidebar {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  height: calc(100vh - 100%);
+  background-color: #e97575;
+  text-align: center;
+  z-index: 50;
+  animation: rightIn 0.3s forwards;
+  ul {
+    list-style-type: none;
+    li {
+      line-height: 50px;
+      display: block;
+
+      font-size: 32px;
+      margin-right: 2rem;
+      color: #202020;
+      &:hover {
+        color: #f7d518;
+      }
+      a {
+        color: #ffffff;
+        &:hover {
+          color: #f7d518;
+        }
+      }
+    }
+  }
+}
+
 /* @media (min-width: 75.0625em) {
   header .socialList:before {
     content: "資助我們";
@@ -190,6 +265,7 @@ header nav {
 }
 .wrap {
   max-width: 68.75em;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -217,6 +293,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
   max-width: 111.25em;
+  width: 100%;
   height: 80px;
 }
 
