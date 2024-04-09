@@ -191,7 +191,7 @@ export default {
     min-height: 100vh;
     background-size: cover;
     .card-container {
-      width: 95vw;
+      width: 100%;
       margin-top: 50px;
       .card2 {
         width: 80%;
@@ -202,6 +202,8 @@ export default {
           width: 100%;
           height: 100%;
           .SVGclore {
+            width: 100%;
+            height: 100%;
             fill: rgb(255, 255, 255);
             transition: fill 0.3s linear;
           }
