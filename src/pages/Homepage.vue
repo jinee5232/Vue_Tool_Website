@@ -94,10 +94,10 @@ export default {
 }
 
 .card2 {
-  width: 120px;
+  width: 150px;
   padding: 30px;
   /* min-width: 300px; */
-  margin: 30px;
+  margin: 20px;
   /* border: 1px solid #ccc; */
   border-radius: 10px;
   transition: box-shadow 0.3s linear;
@@ -106,6 +106,10 @@ export default {
   transition: fill 0.3s linear;
   animation: card 3s forwards;
   animation-duration: 2s;
+  a {
+    width: 100%;
+    height: 100%;
+  }
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
       rgba(0, 0, 0, 0.05) 0px 5px 10px;
@@ -181,23 +185,26 @@ export default {
   }
 }
 @media (max-width: 767px) {
-  .card-container {
-    width: 95vw;
-    margin-top: 50px;
-    .card {
-      width: 100%;
-      margin: 30px 0;
-      border: 1px solid #ccc;
-      display: flex;
-      a {
-        display: flex;
-      }
-    }
-  }
   .HomeBox {
+    padding-top: 100px;
     height: auto;
     min-height: 100vh;
     background-size: cover;
+    .card-container {
+      width: 95vw;
+      margin-top: 50px;
+      .card2 {
+        width: 80%;
+        box-sizing: border-box;
+        margin: 5% 20%;
+        display: flex;
+        a {
+          display: flex;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
   }
 }
 </style>
