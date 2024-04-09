@@ -195,13 +195,16 @@ export default {
       margin-top: 50px;
       .card2 {
         width: 80%;
-        box-sizing: border-box;
         margin: 5% 20%;
         display: flex;
         a {
           display: flex;
           width: 100%;
           height: 100%;
+          .SVGclore {
+            fill: rgb(255, 255, 255);
+            transition: fill 0.3s linear;
+          }
         }
       }
     }
