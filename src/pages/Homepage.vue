@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import SvgNotion from "../../public/SVG/notion.svg?component";
-import SvgHahow from "../../public/SVG/hahow.svg?component";
-import SvgUdemy from "../../public/SVG/udemy.svg?component";
 import SvgFimga from "../../public/SVG/figma.svg?component";
 import SvgGithub from "../../public/SVG/github.svg?component";
+import SvgHahow from "../../public/SVG/hahow.svg?component";
+import SvgNotion from "../../public/SVG/notion.svg?component";
+import SvgUdemy from "../../public/SVG/udemy.svg?component";
 // import TheIcon from "../components/TheIcon.vue";
 
 export default {
@@ -79,7 +79,7 @@ export default {
   display: flex;
   align-self: center;
   /* background-image: url("https://images.pexels.com/photos/937782/pexels-photo-937782.jpeg"); */
-  background-image: url("/public/images/nighe_bg.gif");
+  background-image: url(https://i.imgur.com/7lEglhQ.gif);
   background-size: cover;
   background-position: 0% 80%;
 }

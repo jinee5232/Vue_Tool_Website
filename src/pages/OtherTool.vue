@@ -4,7 +4,7 @@
       <div v-for="(item, index) in filteredWebData" :key="index" class="card">
         <a :href="item.url" target="_blank">
           <div class="card-imgbox">
-            <img :src="item.img" alt="Card Image" class="card-img" />
+            <img :src="item.img" alt="Card Image" class="card-img" referrerpolicy="no-referrer"/>
             <p class="card-typeitem2">{{ item.subType }}</p>
           </div>
           <div class="card-intrbox2">
@@ -13,6 +13,7 @@
           </div>
         </a>
       </div>
+   
     </div>
   </div>
 </template>
@@ -33,11 +34,6 @@ export default {
           img: item.img,
           info: item.info,
           subType: item.Smalltype,
-          // typeof item.type === "string"
-          //   ? item.type.split("、")[1]
-          //   : Array.isArray(item.type)
-          //   ? item.type.join("、").split("、")[1]
-          //   : item.type,
         }));
     },
   },

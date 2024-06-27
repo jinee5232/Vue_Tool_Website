@@ -1,6 +1,7 @@
 <template>
   <header>
     <NavBar />
+    <!-- <NavBar2 /> -->
   </header>
   <main>
     <router-view></router-view>
@@ -12,8 +13,8 @@
 
 <script setup>
 import "./assets/reset.css";
-import NavBar from "./components/NavBar.vue";
 import Footer from "./components/Footer.vue";
+import NavBar from "./components/NavBar.vue";
 </script>
 
 <style>

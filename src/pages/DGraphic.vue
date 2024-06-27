@@ -22,7 +22,7 @@
         <div v-for="(item, index) in filteredWebData" :key="index" class="card">
           <a :href="item.url" target="_blank">
             <div class="card-imgbox">
-              <img :src="item.img" alt="Card Image" class="card-img" />
+              <img :src="item.img" alt="Card Image" class="card-img" referrerpolicy="no-referrer" />
               <p class="card-typeitem2">{{ item.subType }}</p>
             </div>
 
@@ -60,7 +60,7 @@
           >
             <a :href="item.url" target="_blank">
               <div class="card-imgbox">
-                <img :src="item.img" alt="Card Image" class="card-img" />
+                <img :src="item.img" alt="Card Image" class="card-img" referrerpolicy="no-referrer"/>
                 <p class="card-typeitem2">{{ item.subType }}</p>
               </div>
 
