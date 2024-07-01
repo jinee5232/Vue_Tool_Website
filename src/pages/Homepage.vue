@@ -1,5 +1,5 @@
 <template>
-  <div class="HomeBox">
+  <div class="HomeBox" :style="backgroundStyle">
     <div class="card-container">
       <div v-for="(item, index) in filteredWebData" :key="index" class="card2">
         <!-- <img :src="item.img" alt="Card Image" class="card-img" /> -->
@@ -23,6 +23,7 @@ export default {
   data() {
     return {
       webData: [],
+      backgroundStyle: {},
     };
   },
   components: {
@@ -46,6 +47,7 @@ export default {
   },
   mounted() {
     this.fetchWebData();
+    this.setBackground();
   },
   methods: {
     fetchWebData() {
@@ -57,6 +59,45 @@ export default {
         .catch((error) => {
           console.error("Error fetching web data:", error);
         });
+    },
+    setBackground() {
+      const now = new Date();
+      const hours = now.getHours();
+
+      let imageUrl = "";
+
+      if (hours >= 4 && hours < 8) {
+        // 清晨
+        imageUrl =
+          "url(https://i.pinimg.com/originals/48/db/d3/48dbd3dd282e90737625bda891e34f1b.gif)";
+      } else if (hours >= 8 && hours < 12) {
+        // 早上
+        imageUrl =
+          "url((https://i.pinimg.com/originals/49/66/08/496608bfeedd20ca4f6388d721cc8392.gif)";
+      } else if (hours >= 12 && hours < 18) {
+        // 下午
+        imageUrl =
+          "url(https://i.pinimg.com/originals/98/c2/66/98c266cd8c8def7670acabbfc5c66cea.gif)";
+      } else if (hours >= 18 && hours < 20) {
+        // 傍晚
+        imageUrl =
+          "url(https://i.pinimg.com/originals/ef/2f/6f/ef2f6f465754178bcfa9cc5ff48203e7.gif)";
+      } else if (hours >= 20 && hours < 22) {
+        // 晚上
+        imageUrl =
+          "url(https://i.pinimg.com/originals/1c/19/31/1c1931f09a88d4ff5ec524a247ebf9e1.gif)";
+      } else {
+        // 晚上
+        imageUrl =
+          "url(https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif)";
+      }
+
+      this.backgroundStyle = {
+        backgroundImage: imageUrl,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: " 0% 80%",
+      };
     },
   },
 };
@@ -79,9 +120,10 @@ export default {
   display: flex;
   align-self: center;
   /* background-image: url("https://images.pexels.com/photos/937782/pexels-photo-937782.jpeg"); */
-  background-image: url(https://i.imgur.com/7lEglhQ.gif);
+  /* background-image: url(https://i.imgur.com/7lEglhQ.gif); */
+  /* background-image: url(https://i.pinimg.com/originals/1c/19/31/1c1931f09a88d4ff5ec524a247ebf9e1.gif);
   background-size: cover;
-  background-position: 0% 80%;
+  background-position: 0% 80%; */
 }
 
 .card-container {
@@ -191,7 +233,7 @@ export default {
     min-height: 100vh;
     background-size: cover;
     .card-container {
-      width: 100%;
+      width: 80%;
       margin-top: 50px;
       .card2 {
         width: 80%;

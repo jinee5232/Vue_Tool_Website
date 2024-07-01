@@ -1,14 +1,11 @@
 import HomePage from "./pages/Homepage.vue";
 
-import DGraphic from "./pages/DGraphic.vue";
-import DCss from "./pages/DCss.vue";
-import DInspiration from "./pages/DInspiration.vue";
-import OtherTool from "./pages/OtherTool.vue";
 import {
   createRouter,
-  createWebHistory,
-  createWebHashHistory,
+  createWebHashHistory
 } from "vue-router";
+
+import Showpage from "./pages/Showpage.vue";
 
 const routes = [
   {
@@ -17,24 +14,9 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/DInspirationPage",
-    name: "DInspiration",
-    component: DInspiration,
-  },
-  {
-    path: "/DGraphicPage",
-    name: "DGraphic",
-    component: DGraphic,
-  },
-  {
-    path: "/DCssPage",
-    name: "DCss",
-    component: DCss,
-  },
-  {
-    path: "/OtherToolPage",
-    name: "OtherTool",
-    component: OtherTool,
+    path: "/page/:type",
+    name: "Showpage",
+    component: Showpage,
   },
 ];
 

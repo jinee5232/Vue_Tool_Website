@@ -19,19 +19,43 @@
         <nav>
           <ul class="menu">
             <li>
-              <router-link to="/">首頁</router-link>
+              <div>
+                <router-link class="nbFont" to="/">首頁</router-link>
+              </div>
             </li>
             <li>
-              <router-link to="/DGraphicPage">平面美編</router-link>
+              <div>
+                <router-link class="nbFont" to="/page/美編"
+                  >平面美編</router-link
+                >
+              </div>
             </li>
             <li>
-              <router-link to="/DCssPage">CSS樣式</router-link>
+              <div>
+                <router-link class="nbFont" to="/page/CSS">CSS樣式</router-link>
+              </div>
             </li>
             <li>
-              <router-link to="/DInspirationPage">靈感</router-link>
+              <div>
+                <router-link class="nbFont" to="/page/靈感">靈感</router-link>
+              </div>
             </li>
-            <li>
-              <router-link to="/OtherToolPage">更多工具</router-link>
+            <li
+              @mouseenter="dropdown1Open = true"
+              @mouseleave="dropdown1Open = false"
+              class="dropdownItem"
+            >
+              <div>
+                <div class="nbFont">網頁製作</div>
+              </div>
+
+              <div v-if="dropdown1Open" class="ItemDrop">
+                <router-link to="/page/Other">Angular</router-link>
+                <router-link to="/page/Other">Vue</router-link>
+                <router-link to="/page/Other">React</router-link>
+                <router-link to="/page/Other">Wordpress</router-link>
+                <router-link to="/page/Other">網頁工具</router-link>
+              </div>
             </li>
           </ul>
         </nav>
@@ -42,19 +66,19 @@
       <div v-if="hamOpen" class="hameSidebar">
         <ul>
           <li>
-            <router-link to="/">首頁</router-link>
+            <router-link class="nbFont" to="/">首頁</router-link>
           </li>
           <li>
-            <router-link to="/DGraphicPage">平面美編</router-link>
+            <router-link class="nbFont" to="/page/美編">平面美編</router-link>
           </li>
           <li>
-            <router-link to="/DCssPage">CSS樣式</router-link>
+            <router-link class="nbFont" to="/page/CSS">CSS樣式</router-link>
           </li>
           <li>
-            <router-link to="/DInspirationPage">靈感</router-link>
+            <router-link class="nbFont" to="/page/靈感">靈感</router-link>
           </li>
           <li>
-            <router-link to="/OtherToolPage">更多工具</router-link>
+            <router-link class="nbFont" to="/page/Other">更多工具</router-link>
           </li>
         </ul>
       </div>
@@ -67,6 +91,7 @@ export default {
   data() {
     return {
       hamOpen: false,
+      dropdown1Open: false,
       navClass: "default-nav", // 默认样式
       scrollPosition: 0, // 初始化滚动位置为 0
     };
@@ -142,6 +167,7 @@ body a,
 footer .goTop svg,
 .header,
 .meow-logo,
+.nbFont,
 .header .wrap {
   transition: all 0.5s ease-out;
 }
@@ -212,17 +238,18 @@ header nav {
   animation: rightIn 0.3s forwards;
   ul {
     list-style-type: none;
+    height: 100%;
     li {
       line-height: 50px;
-      display: block;
 
+      display: block;
       font-size: 32px;
       margin-right: 2rem;
       color: #202020;
       &:hover {
         color: #f7d518;
       }
-      a {
+      .nbFont {
         color: #ffffff;
         &:hover {
           color: #f7d518;
@@ -231,15 +258,27 @@ header nav {
     }
   }
 }
+.dropdownItem {
+  line-height: 50px;
 
-/* @media (min-width: 75.0625em) {
-  header .socialList:before {
-    content: "資助我們";
-    margin-right: 30px;
-    color: #4a4ab1;
-    cursor: pointer;
+  display: block;
+  padding: 10px 8px;
+  color: #f4edcc;
+  font-size: 24px;
+  font-weight: 600;
+  &:hover {
+    color: #ffffff;
   }
-} */
+  .ItemDrop {
+    position: absolute;
+    z-index: 203;
+    width: 200px;
+    right: -30%;
+    top: 100%;
+    background-color: rgb(237, 175, 175);
+  }
+}
+
 @media (max-width: 64em) {
   .header .socialList {
     display: none;

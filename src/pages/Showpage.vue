@@ -1,20 +1,16 @@
-<template lang="">
+<template>
   <div style="margin-top: 200px">
     <div class="btn_box">
-      <button
-        type="Abtn"
-        @click="showLayout(true)"
-        :class="{ b_color: layout }"
-      >
-        A
-      </button>
-      <button
-        type="Gbtn"
-        @click="showLayout(false)"
-        :class="{ b_color: !layout }"
-      >
-        G
-      </button>
+      <div class="checkbox-wrapper-63">
+        <label class="switch">
+          <input type="checkbox" @click="this.layout = !this.layout" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div style="margin-left: 2rem">
+        <p v-if="layout === true">Single</p>
+        <p v-if="layout === false">Group</p>
+      </div>
     </div>
 
     <div v-show="layout === true">
@@ -22,7 +18,12 @@
         <div v-for="(item, index) in filteredWebData" :key="index" class="card">
           <a :href="item.url" target="_blank">
             <div class="card-imgbox">
-              <img :src="item.img" alt="Card Image" class="card-img" referrerpolicy="no-referrer" />
+              <img
+                :src="item.img"
+                alt="Card Image"
+                class="card-img"
+                referrerpolicy="no-referrer"
+              />
               <p class="card-typeitem2">{{ item.subType }}</p>
             </div>
 
@@ -58,28 +59,37 @@
             :key="index"
             class="card"
           >
-            <div class="card-imgbox">
-              <img :src="item.img" alt="Card Image" class="card-img" referrerpolicy="no-referrer" />
-              <p class="card-typeitem2">{{ item.subType }}</p>
-            </div>
+            <a :href="item.url" target="_blank">
+              <div class="card-imgbox">
+                <img
+                  :src="item.img"
+                  alt="Card Image"
+                  class="card-img"
+                  referrerpolicy="no-referrer"
+                />
+                <p class="card-typeitem2">{{ item.subType }}</p>
+              </div>
 
-            <div class="card-intrbox2">
-              <h2 class="card-title2">{{ item.name }}</h2>
-              <p class="card-info">{{ item.info }}</p>
-            </div>
+              <div class="card-intrbox2">
+                <h2 class="card-title2">{{ item.name }}</h2>
+                <p class="card-info">{{ item.info }}</p>
+              </div>
+            </a>
           </swiper-slide>
         </swiper>
       </div>
     </div>
   </div>
 </template>
-<script>
 
+<script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 // Import Swiper styles
+import axios from "axios";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+
 export default {
   data() {
     return {
@@ -108,35 +118,32 @@ export default {
       return grouped;
     },
     filteredWebData() {
+      const type = this.$route.params.type;
       return this.webData
-        .filter((item) => item.Bigtype.includes("靈感"))
+        .filter((item) => item.Bigtype.includes(type))
         .map((item) => ({
           url: item.url,
           name: item.name,
           img: item.img,
           info: item.info,
           subType: item.Smalltype,
-          // typeof item.type === "string"
-          //   ? item.type.split("、")[1]
-          //   : Array.isArray(item.type)
-          //   ? item.type.join("、").split("、")[1]
-          //   : item.type,
         }));
     },
+  },
+  watch: {
+    "$route.params.type": "fetchWebData",
   },
   mounted() {
     this.fetchWebData();
   },
   methods: {
-    fetchWebData() {
-      fetch("/Vue_Tool_Website/webdata.json")
-        .then((response) => response.json())
-        .then((data) => {
-          this.webData = data;
-        })
-        .catch((error) => {
-          console.error("Error fetching web data:", error);
-        });
+    async fetchWebData() {
+      try {
+        const response = await axios.get("/Vue_Tool_Website/webdata.json");
+        this.webData = response.data;
+      } catch (error) {
+        console.error("Error fetching web data:", error);
+      }
     },
     showLayout(data) {
       this.layout = data;
@@ -144,10 +151,13 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .btn_box {
   width: 100%;
+  display: flex;
   box-sizing: border-box;
+  align-items: center;
   margin: 0 auto;
   padding-left: 10%;
   margin-bottom: 50px;
@@ -229,14 +239,14 @@ export default {
   flex-wrap: wrap;
   width: 80vw;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 /* .card-container2 {
-  display: flex;
-  flex-wrap: nowrap; 防止換行
-  overflow-x: auto; 橫向滾動
-  避免最後一個卡片被遮擋
-} */
+    display: flex;
+    flex-wrap: nowrap; 防止換行
+    overflow-x: auto; 橫向滾動
+    避免最後一個卡片被遮擋
+  } */
 .swiper {
   width: 80vw;
   width: 100%;
@@ -358,10 +368,10 @@ export default {
     font-weight: 700;
     letter-spacing: 5px;
     text-align: left;
+    height: 200px;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 200px;
   }
   .card-title2 {
     font-size: 32px;
@@ -427,7 +437,7 @@ export default {
       background-color: #fff;
     }
     /* transition-timing-function: 5s;
-      transition: opacityinto 5s ease; */
+        transition: opacityinto 5s ease; */
 
     .opacityIN {
       opacity: 1;
@@ -442,5 +452,59 @@ export default {
       }
     }
   }
+}
+
+.checkbox-wrapper-63 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-63 *,
+.checkbox-wrapper-63 ::after,
+.checkbox-wrapper-63 ::before {
+  box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-63 .switch {
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+}
+
+/* The slider */
+.checkbox-wrapper-63 .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #eee;
+  transition: 0.4s;
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em #dfd9d9;
+}
+
+.checkbox-wrapper-63 .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.4em;
+  border-radius: 0.3em;
+  left: 0.3em;
+  bottom: 0.7em;
+  background-color: lightsalmon;
+  transition: 0.4s;
+  box-shadow: 0 0.4em #bcb4b4;
+}
+
+.checkbox-wrapper-63 .slider:hover::before {
+  box-shadow: 0 0.2em #bcb4b4;
+  bottom: 0.5em;
+}
+
+.checkbox-wrapper-63 input:checked + .slider::before {
+  transform: translateX(2em);
+  background: lightgreen;
 }
 </style>
