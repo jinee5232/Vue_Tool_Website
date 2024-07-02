@@ -46,7 +46,7 @@
         </h2>
         <h2 v-else class="group_title groupmove2">{{ subType }}</h2>
         <swiper
-          :slidesPerView="3"
+          :slidesPerView="1"
           :spaceBetween="30"
           :pagination="{
             clickable: true,
@@ -249,7 +249,6 @@ export default {
   } */
 .swiper {
   width: 80vw;
-  width: 100%;
   height: 100%;
   margin: 0 auto;
   padding-bottom: 20px;
@@ -384,7 +383,7 @@ export default {
 }
 @media (max-width: 768px) {
   .card-container {
-    width: 95vw;
+    width: 100vw;
     .card {
       width: 100%;
       margin: 30px 0;
@@ -451,6 +450,9 @@ export default {
         opacity: 1;
       }
     }
+  }
+  .group {
+    width: 90%;
   }
 }
 
