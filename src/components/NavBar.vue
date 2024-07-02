@@ -320,7 +320,7 @@ header nav {
     position: absolute;
     z-index: 203;
     width: 150px;
-    left: 20%;
+    left: -25%;
     top: 100%;
     background-color: rgb(237, 175, 175);
     border-radius: 0 0 20px 20px;
@@ -330,11 +330,9 @@ header nav {
     transform-origin: top;
     transition: opacity 1s ease, max-height 1s ease;
   }
-
   .ItemDrop a:hover {
     background-color: #a4ce95;
   }
-
   .ItemDrop a:before {
     display: none;
   }
@@ -413,19 +411,10 @@ header nav {
 .menu > li {
   position: relative;
 }
-.menu > li + li {
-  padding-left: 50px;
-}
-@media (max-width: 82.5em) {
-  .menu > li + li {
-    padding-left: 20px;
-  }
-}
 
-@media (max-width: 82.5em) {
-  .menu > li + li:before {
-    left: 10px;
-  }
+.menu li {
+  margin: 0 20px;
+  padding: 0 auto;
 }
 .menu a {
   position: relative;
