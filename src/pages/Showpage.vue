@@ -46,7 +46,7 @@
         </h2>
         <h2 v-else class="group_title groupmove2">{{ subType }}</h2>
         <swiper
-          :slidesPerView="1"
+          :slidesPerView="slidesPerView"
           :spaceBetween="30"
           :pagination="{
             clickable: true,
@@ -95,11 +95,18 @@ export default {
     return {
       webData: [],
       layout: true,
+      slidesPerView: window.innerWidth < 768 ? 1 : 3,
     };
   },
   components: {
     Swiper,
     SwiperSlide,
+  },
+  created() {
+    window.addEventListener("resize", this.updateSlidesPerView);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.updateSlidesPerView);
   },
   setup() {
     return {
@@ -137,6 +144,9 @@ export default {
     this.fetchWebData();
   },
   methods: {
+    updateSlidesPerView() {
+      this.slidesPerView = window.innerWidth < 768 ? 1 : 3;
+    },
     async fetchWebData() {
       try {
         const response = await axios.get("/Vue_Tool_Website/webdata.json");

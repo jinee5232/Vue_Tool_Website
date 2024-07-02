@@ -49,6 +49,9 @@ export default {
     this.fetchWebData();
     this.setBackground();
   },
+  created() {
+    window.addEventListener("resize", this.setBackground);
+  },
   methods: {
     fetchWebData() {
       fetch("/Vue_Tool_Website/webdata.json")
