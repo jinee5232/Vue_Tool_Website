@@ -66,16 +66,24 @@
       <div v-if="hamOpen" class="hameSidebar">
         <ul>
           <li>
-            <router-link class="nbFont" to="/">首頁</router-link>
+            <router-link class="nbFont" @click="closeSidebar" to="/"
+              >首頁</router-link
+            >
           </li>
           <li>
-            <router-link class="nbFont" to="/page/美編">平面美編</router-link>
+            <router-link class="nbFont" @click="closeSidebar" to="/page/美編"
+              >平面美編</router-link
+            >
           </li>
           <li>
-            <router-link class="nbFont" to="/page/CSS">CSS樣式</router-link>
+            <router-link class="nbFont" @click="closeSidebar" to="/page/CSS"
+              >CSS樣式</router-link
+            >
           </li>
           <li>
-            <router-link class="nbFont" to="/page/靈感">靈感</router-link>
+            <router-link class="nbFont" @click="closeSidebar" to="/page/靈感"
+              >靈感</router-link
+            >
           </li>
           <li>
             <div class="nbFont" @click="MorebtnClick = !MorebtnClick">
@@ -83,11 +91,21 @@
             </div>
           </li>
           <div v-if="MorebtnClick === true" class="SideItemDrop">
-            <router-link to="/page/Other">Angular</router-link>
-            <router-link to="/page/Other">Vue</router-link>
-            <router-link to="/page/Other">React</router-link>
-            <router-link to="/page/Other">Wordpress</router-link>
-            <router-link to="/page/Other">網頁工具</router-link>
+            <router-link to="/page/Other" @click="closeSidebar"
+              >Angular</router-link
+            >
+            <router-link to="/page/Other" @click="closeSidebar"
+              >Vue</router-link
+            >
+            <router-link to="/page/Other" @click="closeSidebar"
+              >React</router-link
+            >
+            <router-link to="/page/Other" @click="closeSidebar"
+              >Wordpress</router-link
+            >
+            <router-link to="/page/Other" @click="closeSidebar"
+              >網頁工具</router-link
+            >
           </div>
         </ul>
       </div>
@@ -119,6 +137,10 @@ export default {
     window.addEventListener("resize", this.handleResize);
   },
   methods: {
+    closeSidebar() {
+      this.hamOpen = false;
+      this.MorebtnClick = false;
+    },
     handleResize() {
       // 获取视口宽度
       const windowWidth = window.innerWidth;
@@ -251,9 +273,9 @@ header nav {
     list-style-type: none;
     height: 100%;
     li {
-      line-height: 20px;
+      line-height: 24px;
       display: block;
-      font-size: 16px;
+      font-size: 20px;
       margin-right: 2rem;
       color: #202020;
       &:hover {
@@ -568,7 +590,7 @@ header nav {
     background-color: white;
     color: #678f59;
     line-height: 36px;
-    font-size: 12px;
+    font-size: 18px;
   }
 }
 @keyframes upIn {
