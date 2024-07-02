@@ -63,41 +63,55 @@ export default {
     setBackground() {
       const now = new Date();
       const hours = now.getHours();
+      const isMobile = window.innerWidth < 768;
 
       let imageUrl = "";
 
       if (hours >= 4 && hours < 8) {
         // 清晨
-        imageUrl =
-          "url(https://i.pinimg.com/originals/48/db/d3/48dbd3dd282e90737625bda891e34f1b.gif)";
+        imageUrl = isMobile
+          ? "url(https://i.pinimg.com/originals/6a/42/9a/6a429af860c91ed307ca581707c21b6c.gif)"
+          : "url(https://i.pinimg.com/originals/48/db/d3/48dbd3dd282e90737625bda891e34f1b.gif)";
       } else if (hours >= 8 && hours < 12) {
         // 早上
-        imageUrl =
-          "url(https://i.pinimg.com/originals/49/66/08/496608bfeedd20ca4f6388d721cc8392.gif)";
+        imageUrl = isMobile
+          ? "url(https://i.pinimg.com/originals/b3/7f/bf/b37fbf6cefd77a0c0375f19dde0ee75b.gif)"
+          : "url(https://i.pinimg.com/originals/49/66/08/496608bfeedd20ca4f6388d721cc8392.gif)";
       } else if (hours >= 12 && hours < 18) {
         // 下午
-        imageUrl =
-          "url(https://i.pinimg.com/originals/98/c2/66/98c266cd8c8def7670acabbfc5c66cea.gif)";
+        imageUrl = isMobile
+          ? "url(https://i.pinimg.com/564x/cf/6f/5e/cf6f5efdd24ea69543465364efcafe98.jpg)"
+          : "url(https://i.pinimg.com/originals/98/c2/66/98c266cd8c8def7670acabbfc5c66cea.gif)";
       } else if (hours >= 18 && hours < 20) {
         // 傍晚
-        imageUrl =
-          "url(https://i.pinimg.com/originals/ef/2f/6f/ef2f6f465754178bcfa9cc5ff48203e7.gif)";
+        imageUrl = isMobile
+          ? "url(https://i.pinimg.com/originals/2d/44/e9/2d44e965dff94b7aa7a51fb42f25faf8.gif)"
+          : "url(https://i.pinimg.com/originals/ef/2f/6f/ef2f6f465754178bcfa9cc5ff48203e7.gif)";
       } else if (hours >= 20 && hours < 22) {
         // 晚上
-        imageUrl =
-          "url(https://i.pinimg.com/originals/1c/19/31/1c1931f09a88d4ff5ec524a247ebf9e1.gif)";
+        imageUrl = isMobile
+          ? "url(https://i.pinimg.com/originals/96/df/13/96df1363fa65b541a1dfda19bac82690.gif)"
+          : "url(https://i.pinimg.com/originals/1c/19/31/1c1931f09a88d4ff5ec524a247ebf9e1.gif)";
       } else {
         // 晚上
-        imageUrl =
-          "url(https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif)";
+        imageUrl = isMobile
+          ? "url(https://i.pinimg.com/originals/2d/c1/bd/2dc1bd8616e72c9b244fb690e7712989.gif)"
+          : "url(https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif)";
       }
 
-      this.backgroundStyle = {
-        backgroundImage: imageUrl,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: " 0% 80%",
-      };
+      this.backgroundStyle = isMobile
+        ? {
+            backgroundImage: imageUrl,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: " 50% 100%",
+          }
+        : {
+            backgroundImage: imageUrl,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: " 0% 80%",
+          };
     },
   },
 };
