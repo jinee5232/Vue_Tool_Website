@@ -1,10 +1,14 @@
 {
   "name": "vue-tool-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1-0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "bump-build-version": "npm --no-git-tag-version version prerelease",
+    "bump-patch-version": "npm --no-git-tag-version version prepatch",
+    "bump-minor-version": "npm --no-git-tag-version version preminor",
+    "bump-major-version": "npm --no-git-tag-version version premajor",
     "build": "vite build",
     "preview": "vite preview",
     "swagger": "node src/swagger.js"

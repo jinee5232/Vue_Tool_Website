@@ -73,7 +73,7 @@ export default {
       } else if (hours >= 8 && hours < 12) {
         // 早上
         imageUrl =
-          "url((https://i.pinimg.com/originals/49/66/08/496608bfeedd20ca4f6388d721cc8392.gif)";
+          "url(https://i.pinimg.com/originals/49/66/08/496608bfeedd20ca4f6388d721cc8392.gif)";
       } else if (hours >= 12 && hours < 18) {
         // 下午
         imageUrl =
