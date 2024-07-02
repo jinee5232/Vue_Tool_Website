@@ -78,8 +78,17 @@
             <router-link class="nbFont" to="/page/靈感">靈感</router-link>
           </li>
           <li>
-            <router-link class="nbFont" to="/page/Other">更多工具</router-link>
+            <div class="nbFont" @click="MorebtnClick = !MorebtnClick">
+              網頁製作
+            </div>
           </li>
+          <div v-if="MorebtnClick === true" class="SideItemDrop">
+            <router-link to="/page/Other">Angular</router-link>
+            <router-link to="/page/Other">Vue</router-link>
+            <router-link to="/page/Other">React</router-link>
+            <router-link to="/page/Other">Wordpress</router-link>
+            <router-link to="/page/Other">網頁工具</router-link>
+          </div>
         </ul>
       </div>
     </div>
@@ -94,6 +103,7 @@ export default {
       dropdown1Open: false,
       navClass: "default-nav", // 默认样式
       scrollPosition: 0, // 初始化滚动位置为 0
+      MorebtnClick: false,
     };
   },
   watch: {
@@ -236,14 +246,14 @@ header nav {
   text-align: center;
   z-index: 50;
   animation: rightIn 0.3s forwards;
+
   ul {
     list-style-type: none;
     height: 100%;
     li {
-      line-height: 50px;
-
+      line-height: 20px;
       display: block;
-      font-size: 32px;
+      font-size: 16px;
       margin-right: 2rem;
       color: #202020;
       &:hover {
@@ -256,6 +266,15 @@ header nav {
         }
       }
     }
+  }
+}
+@keyframes rightIn {
+  from {
+    transform: translate3d(20%, 0, 0);
+  }
+
+  to {
+    transform: none;
   }
 }
 .dropdownItem {
@@ -533,5 +552,34 @@ header nav {
 }
 .page1-nav {
   background-color: rgba(0, 0, 0, 0.1);
+}
+.SideItemDrop {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  animation: upIn 0.3s forwards;
+  transform-origin: top;
+
+  a {
+    padding: 0 2rem;
+    width: 100%;
+    background-color: white;
+    color: #678f59;
+    line-height: 36px;
+    font-size: 12px;
+  }
+}
+@keyframes upIn {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scaleY(100%);
+    opacity: 1;
+  }
 }
 </style>
