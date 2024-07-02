@@ -48,8 +48,8 @@
               <div>
                 <div class="nbFont">網頁製作</div>
               </div>
-
-              <div v-if="dropdown1Open" class="ItemDrop">
+              <!-- v-show="dropdown1Open" -->
+              <div class="ItemDrop">
                 <router-link to="/page/Other">Angular</router-link>
                 <router-link to="/page/Other">Vue</router-link>
                 <router-link to="/page/Other">React</router-link>
@@ -253,6 +253,7 @@ body a {
 }
 header nav {
   flex-grow: 1;
+  padding-right: 3rem;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -301,22 +302,41 @@ header nav {
 }
 .dropdownItem {
   line-height: 50px;
-
   display: block;
   padding: 10px 8px;
   color: #f4edcc;
   font-size: 24px;
   font-weight: 600;
+  position: relative;
   &:hover {
     color: #ffffff;
+    .ItemDrop {
+      opacity: 1;
+      max-height: 400px;
+    }
   }
+
   .ItemDrop {
     position: absolute;
     z-index: 203;
-    width: 200px;
-    right: -30%;
+    width: 150px;
+    left: 20%;
     top: 100%;
     background-color: rgb(237, 175, 175);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-height: 10px;
+    transform-origin: top;
+    transition: opacity 1s ease, max-height 1s ease;
+  }
+
+  .ItemDrop a:hover {
+    background-color: #a4ce95;
+  }
+
+  .ItemDrop a:before {
+    display: none;
   }
 }
 

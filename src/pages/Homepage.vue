@@ -263,7 +263,9 @@ export default {
           .SVGclore {
             width: 100%;
             height: 100%;
-            fill: rgb(255, 255, 255);
+            .SVGclore {
+              fill: rgb(125, 165, 106);
+            }
             transition: fill 0.3s linear;
           }
         }
