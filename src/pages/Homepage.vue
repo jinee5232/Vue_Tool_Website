@@ -85,13 +85,20 @@ export default {
           : isTable
           ? "url(https://i.pinimg.com/originals/e1/19/14/e1191464111f7e01c7b8bdf0dab01033.gif)"
           : "url(https://i.pinimg.com/originals/49/66/08/496608bfeedd20ca4f6388d721cc8392.gif)";
-      } else if (hours >= 12 && hours < 18) {
-        // 下午
+      } else if (hours >= 12 && hours < 15) {
+        // 中午
         imageUrl = isMobile
           ? "url(https://i.pinimg.com/564x/cf/6f/5e/cf6f5efdd24ea69543465364efcafe98.jpg)"
           : isTable
           ? "url(https://i.pinimg.com/originals/50/30/36/503036abe4097ed6c0eee297edde5a3c.gif)"
-          : "url(https://i.pinimg.com/originals/98/c2/66/98c266cd8c8def7670acabbfc5c66cea.gif)";
+          : "url(https://i.pinimg.com/originals/8e/3d/3b/8e3d3b54c92c37680b16d4b857567ab6.gif)";
+      } else if (hours >= 15 && hours < 18) {
+        // 下午
+        imageUrl = isMobile
+          ? "url(https://i.pinimg.com/564x/cf/6f/5e/cf6f5efdd24ea69543465364efcafe98.jpg)"
+          : isTable
+          ? "url(https://i.pinimg.com/originals/50/12/3c/50123cfa7afaa751a4bcbe3e92024477.gif)"
+          : "url(https://i.pinimg.com/originals/0a/a1/31/0aa131abc3ec589e6ecfb97b763924a4.gif)";
       } else if (hours >= 18 && hours < 20) {
         // 傍晚
         imageUrl = isMobile
