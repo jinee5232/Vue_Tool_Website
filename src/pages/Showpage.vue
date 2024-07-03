@@ -95,7 +95,8 @@ export default {
     return {
       webData: [],
       layout: true,
-      slidesPerView: window.innerWidth < 768 ? 1 : 3,
+      slidesPerView:
+        window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 2 : 3,
     };
   },
   components: {
@@ -145,7 +146,8 @@ export default {
   },
   methods: {
     updateSlidesPerView() {
-      this.slidesPerView = window.innerWidth < 768 ? 1 : 3;
+      this.slidesPerView =
+        window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 2 : 3;
     },
     async fetchWebData() {
       try {

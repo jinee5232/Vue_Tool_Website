@@ -95,7 +95,7 @@ export default {
       } else if (hours >= 15 && hours < 18) {
         // 下午
         imageUrl = isMobile
-          ? "url(https://i.pinimg.com/564x/cf/6f/5e/cf6f5efdd24ea69543465364efcafe98.jpg)"
+          ? "url(https://i.pinimg.com/originals/6f/bc/44/6fbc440fae8707546834d0124272500c.gif)"
           : isTable
           ? "url(https://i.pinimg.com/originals/50/12/3c/50123cfa7afaa751a4bcbe3e92024477.gif)"
           : "url(https://i.pinimg.com/originals/0a/a1/31/0aa131abc3ec589e6ecfb97b763924a4.gif)";
