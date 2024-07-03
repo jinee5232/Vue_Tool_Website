@@ -103,6 +103,8 @@ export default {
         // 傍晚
         imageUrl = isMobile
           ? "url(https://i.pinimg.com/originals/2d/44/e9/2d44e965dff94b7aa7a51fb42f25faf8.gif)"
+          : isTable
+          ? "url(https://i.pinimg.com/originals/9b/42/05/9b42059d8a17648c903c67979604dd76.gif)"
           : "url(https://i.pinimg.com/originals/ef/2f/6f/ef2f6f465754178bcfa9cc5ff48203e7.gif)";
       } else if (hours >= 20 && hours < 22) {
         // 晚上
