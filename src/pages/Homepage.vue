@@ -67,6 +67,7 @@ export default {
       const now = new Date();
       const hours = now.getHours();
       const isMobile = window.innerWidth < 768;
+      const isTable = (window.innerWidth >= 768) & (window.innerWidth < 1440);
 
       let imageUrl = "";
 
@@ -74,16 +75,22 @@ export default {
         // 清晨
         imageUrl = isMobile
           ? "url(https://i.pinimg.com/originals/6a/42/9a/6a429af860c91ed307ca581707c21b6c.gif)"
+          : isTable
+          ? "url(https://i.pinimg.com/originals/c5/c6/5b/c5c65bdf726853eb5c4e5384418bab5a.gif)"
           : "url(https://i.pinimg.com/originals/48/db/d3/48dbd3dd282e90737625bda891e34f1b.gif)";
       } else if (hours >= 8 && hours < 12) {
         // 早上
         imageUrl = isMobile
           ? "url(https://i.pinimg.com/originals/b3/7f/bf/b37fbf6cefd77a0c0375f19dde0ee75b.gif)"
+          : isTable
+          ? "url(https://i.pinimg.com/originals/e1/19/14/e1191464111f7e01c7b8bdf0dab01033.gif)"
           : "url(https://i.pinimg.com/originals/49/66/08/496608bfeedd20ca4f6388d721cc8392.gif)";
       } else if (hours >= 12 && hours < 18) {
         // 下午
         imageUrl = isMobile
           ? "url(https://i.pinimg.com/564x/cf/6f/5e/cf6f5efdd24ea69543465364efcafe98.jpg)"
+          : isTable
+          ? "url(https://i.pinimg.com/originals/50/30/36/503036abe4097ed6c0eee297edde5a3c.gif)"
           : "url(https://i.pinimg.com/originals/98/c2/66/98c266cd8c8def7670acabbfc5c66cea.gif)";
       } else if (hours >= 18 && hours < 20) {
         // 傍晚
