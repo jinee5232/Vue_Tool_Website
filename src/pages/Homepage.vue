@@ -124,12 +124,14 @@ export default {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: " 50% 100%",
+            backgroundAttachment: "fixed",
           }
         : {
             backgroundImage: imageUrl,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: " 0% 80%",
+            backgroundAttachment: "fixed",
           };
     },
   },

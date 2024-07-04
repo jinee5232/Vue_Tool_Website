@@ -403,7 +403,7 @@ header nav {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 64em) {
+@media (max-width: 75em) {
   .menu {
     display: none;
   }
@@ -470,7 +470,7 @@ header nav {
   cursor: pointer;
   background-color: transparent;
 }
-@media (min-width: 64.0625em) {
+@media (min-width: 75em) {
   .menuOpenBtn {
     display: none;
   }
