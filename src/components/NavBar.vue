@@ -465,6 +465,7 @@ header nav {
   position: relative;
   width: 40px;
   height: 40px;
+  margin-right: 2rem;
   padding: 0;
   border: none;
   cursor: pointer;
