@@ -50,11 +50,11 @@
               </div>
               <!-- v-show="dropdown1Open" -->
               <div class="ItemDrop">
-                <router-link to="/page/Other">Angular</router-link>
-                <router-link to="/page/Other">Vue</router-link>
+                <router-link to="/page/Angular">Angular</router-link>
+                <router-link to="/page/Vue">Vue</router-link>
                 <router-link to="/page/Other">React</router-link>
                 <router-link to="/page/Other">Wordpress</router-link>
-                <router-link to="/page/Other">網頁工具</router-link>
+                <router-link to="/page/工具">網頁工具</router-link>
               </div>
             </li>
           </ul>
@@ -91,19 +91,17 @@
             </div>
           </li>
           <div v-if="MorebtnClick === true" class="SideItemDrop">
-            <router-link to="/page/Other" @click="closeSidebar"
+            <router-link to="/page/Angular" @click="closeSidebar"
               >Angular</router-link
             >
-            <router-link to="/page/Other" @click="closeSidebar"
-              >Vue</router-link
-            >
+            <router-link to="/page/Vue" @click="closeSidebar">Vue</router-link>
             <router-link to="/page/Other" @click="closeSidebar"
               >React</router-link
             >
             <router-link to="/page/Other" @click="closeSidebar"
               >Wordpress</router-link
             >
-            <router-link to="/page/Other" @click="closeSidebar"
+            <router-link to="/page/工具" @click="closeSidebar"
               >網頁工具</router-link
             >
           </div>
@@ -179,6 +177,7 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 .header_bg {
   position: fixed;
   width: 100vw;
@@ -217,6 +216,9 @@ footer .goTop svg,
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 @media (max-width: 68.75em) {
   .wrap {
@@ -322,16 +324,22 @@ header nav {
     width: 150px;
     left: -25%;
     top: 100%;
-    background-color: rgb(237, 175, 175);
+    background-color: #f1b0b0;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     max-height: 10px;
     transform-origin: top;
     transition: opacity 1s ease, max-height 1s ease;
+    a {
+      padding: 0 2rem;
+      color: #2574ad;
+      font-size: 1rem;
+    }
   }
   .ItemDrop a:hover {
-    background-color: #a4ce95;
+    background-color: #86a3b8;
+    color: #b11717;
   }
   .ItemDrop a:before {
     display: none;
