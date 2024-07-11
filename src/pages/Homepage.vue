@@ -91,7 +91,7 @@ export default {
           ? "url(https://i.pinimg.com/564x/cf/6f/5e/cf6f5efdd24ea69543465364efcafe98.jpg)"
           : isTable
           ? "url(https://i.pinimg.com/originals/50/30/36/503036abe4097ed6c0eee297edde5a3c.gif)"
-          : "url(https://i.pinimg.com/originals/8e/3d/3b/8e3d3b54c92c37680b16d4b857567ab6.gif)";
+          : "url(https://i.pinimg.com/originals/4a/86/24/4a86243b02d28c05212af2ba91b2e279.gif)";
       } else if (hours >= 15 && hours < 18) {
         // 下午
         imageUrl = isMobile
@@ -112,7 +112,7 @@ export default {
           ? "url(https://i.pinimg.com/originals/96/df/13/96df1363fa65b541a1dfda19bac82690.gif)"
           : "url(https://i.pinimg.com/originals/1c/19/31/1c1931f09a88d4ff5ec524a247ebf9e1.gif)";
       } else {
-        // 晚上
+        // 其他
         imageUrl = isMobile
           ? "url(https://i.pinimg.com/originals/2d/c1/bd/2dc1bd8616e72c9b244fb690e7712989.gif)"
           : "url(https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif)";
