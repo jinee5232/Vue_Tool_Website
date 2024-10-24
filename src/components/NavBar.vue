@@ -52,8 +52,8 @@
               <div class="ItemDrop">
                 <router-link to="/page/Angular">Angular</router-link>
                 <router-link to="/page/Vue">Vue</router-link>
-                <router-link to="/page/Other">React</router-link>
-                <router-link to="/page/Other">Wordpress</router-link>
+                <router-link to="/page/React">React</router-link>
+                <router-link to="/page/Wordpress">Wordpress</router-link>
                 <router-link to="/page/工具">網頁工具</router-link>
               </div>
             </li>
@@ -95,10 +95,10 @@
               >Angular</router-link
             >
             <router-link to="/page/Vue" @click="closeSidebar">Vue</router-link>
-            <router-link to="/page/Other" @click="closeSidebar"
+            <router-link to="/page/React" @click="closeSidebar"
               >React</router-link
             >
-            <router-link to="/page/Other" @click="closeSidebar"
+            <router-link to="/page/Wordpress" @click="closeSidebar"
               >Wordpress</router-link
             >
             <router-link to="/page/工具" @click="closeSidebar"
