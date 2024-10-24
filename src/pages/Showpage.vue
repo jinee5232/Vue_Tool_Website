@@ -80,16 +80,9 @@
       </div>
     </div>
   </div>
-  <div tyle="margin-top: 200px" v-if="filteredWebData.length === 0">
-    <h1 style="color: black">{ filteredWebData }</h1>
-    <h1>No Data</h1>
+  <div class="noData_bg" v-if="filteredWebData.length === 0">
     <div>
-      <h1 style="color: black">{ filteredWebData }</h1>
-      <h1>No Data</h1>
-      <img
-        src="https://i.pinimg.com/originals/ef/2f/6f/ef2f6f465754178bcfa9cc5ff48203e7.gif"
-        alt=""
-      />
+      <img src="../../public/images/NoData.png" alt="" />
     </div>
   </div>
 </template>
@@ -179,6 +172,11 @@ export default {
 </script>
 
 <style scoped>
+.noData_bg {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
 .btn_box {
   width: 100%;
   display: flex;
