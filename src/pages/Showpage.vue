@@ -82,7 +82,7 @@
   </div>
   <div class="noData_bg" v-if="filteredWebData.length === 0">
     <div>
-      <img src="../../public/images/NoData.png" alt="" />
+      <img src="/images/NoData.png" alt="" />
     </div>
   </div>
 </template>
