@@ -1,7 +1,28 @@
 <template>
   <div class="HomeBox" :style="backgroundStyle">
     <div class="card-container">
-      <div v-for="(item, index) in filteredWebData" :key="index" class="card2">
+      <div
+        v-for="(item, index) in filteredWebData"
+        :key="index"
+        class="card2"
+        :alt="item.Smalltype"
+        @mouseenter="showTooltip(index)"
+        @mouseleave="hideTooltip(index)"
+        @mousemove="updateTooltipPosition($event, index)"
+        ref="cardElements"
+      >
+        <!-- :style="{ top: item.tooltipY + 'px', left: item.tooltipX + 'px' }" -->
+        <div
+          v-show="item.isTooltipVisible"
+          class="tooltip"
+          :style="{ top: item.tooltipY + 'px', left: item.tooltipX + 'px' }"
+        >
+          <span
+            :style="{ color: '#ffffff', fontSize: '20px', fontWeight: '1000' }"
+            >{{ item.name }}</span
+          ><br />
+          <span :style="{ color: '#ffffff' }"> {{ item.info }}</span>
+        </div>
         <!-- <img :src="item.img" alt="Card Image" class="card-img" /> -->
         <a :href="item.url" target="_blank">
           <component :is="item.svg" class="SVGclore" />
@@ -14,6 +35,7 @@
 <script>
 import SvgFimga from "../../public/SVG/figma.svg?component";
 import SvgGithub from "../../public/SVG/github.svg?component";
+import HackMD from "../../public/SVG/hackmd.svg?component";
 import SvgHahow from "../../public/SVG/hahow.svg?component";
 import SvgNotion from "../../public/SVG/notion.svg?component";
 import SvgUdemy from "../../public/SVG/udemy.svg?component";
@@ -32,17 +54,11 @@ export default {
     SvgUdemy,
     SvgFimga,
     SvgGithub,
+    HackMD,
   },
   computed: {
     filteredWebData() {
-      return this.webData
-        .filter((item) => item.Bigtype.includes("辦公"))
-        .map((item) => ({
-          url: item.url,
-          name: item.name,
-          svg: item.svg, // 这里的 item.img 应该是对应 SVG 图标的路径，而不是组件名
-          info: item.info,
-        }));
+      return this.webData.filter((item) => item.Bigtype.includes("辦公"));
     },
   },
   mounted() {
@@ -53,11 +69,35 @@ export default {
     window.addEventListener("resize", this.setBackground);
   },
   methods: {
+    showTooltip(index) {
+      this.filteredWebData[index].isTooltipVisible = true;
+      console.log(this.webData[index].isTooltipVisible);
+    },
+    hideTooltip(index) {
+      this.filteredWebData[index].isTooltipVisible = false;
+    },
+    updateTooltipPosition(event, index) {
+      // 獲取當前卡片的邊界信息
+      const cardElement = this.$refs.cardElements[index]; // 獲取當前卡片的參考
+      const rect = cardElement.getBoundingClientRect();
+
+      this.filteredWebData[index].tooltipX = event.clientX - rect.left; // 相對於父元素的 X
+      this.filteredWebData[index].tooltipY = event.clientY - rect.top; // 相對於父元素的 Y
+
+      // 可以添加一些偏移量
+      const tooltipOffset = 10; // 可調整的偏移量
+      this.filteredWebData[index].tooltipY -= tooltipOffset; // 在鼠標上方顯示
+    },
     fetchWebData() {
       fetch("/Vue_Tool_Website/webdata.json")
         .then((response) => response.json())
         .then((data) => {
-          this.webData = data;
+          this.webData = data.map((item) => ({
+            ...item,
+            isTooltipVisible: false, // 確保每個項目都有這個屬性
+            tooltipX: 0,
+            tooltipY: 0,
+          }));
         })
         .catch((error) => {
           console.error("Error fetching web data:", error);
@@ -139,6 +179,16 @@ export default {
 </script>
 
 <style scoped>
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.7); /* 背景色 */
+
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 9999; /* 提高 z-index，確保 tooltip 不被其他元素遮擋 */
+}
 *:focus {
   outline: none;
 }
@@ -163,7 +213,7 @@ export default {
 
 .card-container {
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 80vw;
   flex-wrap: wrap;
   margin: auto;
@@ -171,6 +221,7 @@ export default {
 }
 
 .card2 {
+  position: relative;
   width: 150px;
   padding: 30px;
   /* min-width: 300px; */

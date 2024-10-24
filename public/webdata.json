@@ -1,362 +1,373 @@
 [
-    {
-        "name": "TableConvert ",
-        "url": "https://tableconvert.com/zh-tw/excel-to-json",
-        "Bigtype": "工具",
-        "Smalltype": "資料轉換",
-        "img": "https://i.imgur.com/pzDfy4Q.png",
-        "svg": "",
-        "info": "TableConvert 是一個在線工具，可以將 Excel 表格輕鬆轉換為 JSON 格式。使用者只需上傳 Excel 文件或粘貼表格數據，即可生成對應的 JSON 結構。它支持自定義設置、預覽結果並下載，適合開發者和數據分析師高效處理數據轉換需求。"
-    },
-    {
-        "name": "tinypng",
-        "url": "https://tinypng.com/",
-        "Bigtype": "工具",
-        "Smalltype": "壓縮",
-        "img": "https://i.imgur.com/nlXWUkh.png",
-        "svg": "",
-        "info": "用於圖像壓縮的工具，可以幫助用戶快速壓縮圖片文件，減少文件大小而不損失品質。這個工具對於網頁開發者和設計師來說非常寶貴，能夠幫助他們優化網站性能和加快加載速度。"
-    },
-    {
-        "name": "ICOOON MONO",
-        "url": "https://icooon-mono.com/?lang=en",
-        "Bigtype": "美編",
-        "Smalltype": "Icon素材",
-        "img": "https://i.imgur.com/c75Qly8.png",
-        "svg": "",
-        "info": "在智慧型電腦、手機等裝置的普及，讓 UI/UX 引人注目，於是提供超過 6000 多種的圖標。選擇所需的插圖後，於右側能選擇線條的粗度、線條顏色（黑／白）、檔案格式類型等。"
-    },
-    {
-        "name": "Feather",
-        "url": "https://feathericons.com/",
-        "Bigtype": "美編",
-        "Smalltype": "Icon素材",
-        "img": "https://i.imgur.com/sXBBRMl.png",
-        "svg": "",
-        "info": "Feather Icons提供免費的開源圖標庫，包含各種風格和主題的簡潔向量圖標，可用於網頁、應用程式等項目中。Feather Icons的圖標設計精簡、易於使用，為專案提供豐富的圖標選擇。"
-    },
-    {
-        "name": "Material Design",
-        "url": "https://m3.material.io/",
-        "Bigtype": "美編",
-        "Smalltype": "layout",
-        "img": "https://i.imgur.com/J6E5YZ6.png",
-        "svg": "",
-        "info": "Material Design 是由 Google 推出的設計系統，旨在提供一致且美觀的用戶體驗。它結合了科技、美學和功能性，將物質的特性和虛擬界面結合，提供了一套簡潔、直觀的設計準則，適用於各種平台和裝置。"
-    },
-    {
-        "name": "ios developer",
-        "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
-        "Bigtype": "美編",
-        "Smalltype": "layout",
-        "img": "https://i.imgur.com/H90Djjb.png",
-        "svg": "",
-        "info": "Apple 開發者網站提供 iOS 人機介面指南，助您打造符合 Apple 標準的 iOS 應用程式設計。"
-    },
-    {
-        "name": "Ant design",
-        "url": "https://ant.design/index-cn",
-        "Bigtype": "美編",
-        "Smalltype": "layout",
-        "img": "https://i.imgur.com/HzTveCL.png",
-        "svg": "",
-        "info": "Ant Design是一個優秀的UI設計框架，專為React應用程序而設。它提供了一個豐富的組件庫和設計模式，使開發者可以輕鬆構建美觀且易於使用的界面。其設計風格現代簡潔，並且支持響應式設計，適用於各種設備和尺寸。"
-    },
-    {
-        "name": "いらすとや",
-        "url": "https://www.irasutoya.com/",
-        "Bigtype": "美編",
-        "Smalltype": "向量素材",
-        "img": "https://i.imgur.com/YMbw1hm.png",
-        "svg": "",
-        "info": "提供免費的高品質插畫和圖像素材，涵蓋多種主題和風格，適合用於設計、印刷和網路用途。"
-    },
-    {
-        "name": "ソコスト",
-        "url": "https://soco-st.com/",
-        "Bigtype": "美編",
-        "Smalltype": "向量素材",
-        "img": "https://i.imgur.com/bm1FvoE.png",
-        "svg": "",
-        "info": "分為生活、人物、季節／活動等 8 種類別，提供 PNG、SVG、EPS 的格式，網站下方供關鍵詞搜尋。點進所需的插畫頁面後，有儲存功能以便往後搜尋，能還將插圖的部分區域更換為需要的顏色。"
-    },
-    {
-        "name": "イラストセンター",
-        "url": "https://illustcenter.com/",
-        "Bigtype": "美編",
-        "Smalltype": "向量素材",
-        "img": "https://i.imgur.com/cNw2iWn.png",
-        "svg": "",
-        "info": "插圖線條、顏色溫潤，網站底部有更詳細的分類以便找尋，左側則有人氣插畫可供參考。點進所需的插畫頁面後，下方有相關插畫能延伸搜尋。"
-    },
-    {
-        "name": "Vector Shelf",
-        "url": "https://vectorshelf.com/",
-        "Bigtype": "美編",
-        "Smalltype": "向量素材",
-        "img": "https://i.imgur.com/nqcidHV.png",
-        "svg": "",
-        "info": "插圖為線條感的手繪風，分為飲料、食物、商品、信件等七種類別，點進所需的插畫頁面後，僅一鍵就能下載。"
-    },
-    {
-        "name": "Undraw",
-        "url": "https://undraw.co/illustrations",
-        "Bigtype": "美編",
-        "Smalltype": "向量素材",
-        "img": "https://i.imgur.com/LTgVCAW.png",
-        "svg": "",
-        "info": "Undraw提供免費、可定制的插圖，涵蓋多樣主題和風格，讓使用者可根據需求自由編輯和應用。Undraw的插圖操作簡便，為專案增添個性化與創意。"
-    },
-    {
-        "name": "Colorhunt",
-        "url": "https://colorhunt.co/",
-        "Bigtype": "美編",
-        "Smalltype": "配色",
-        "img": "https://i.imgur.com/M0Ishl2.png",
-        "svg": "",
-        "info": "Colorhunt 是一個提供精心挑選的配色方案的網站，擁有各種風格和主題的色彩選擇。從簡約到豐富，從明亮到柔和，Colorhunt 提供了豐富的選擇，讓您輕鬆找到適合您設計需求的理想配色方案"
-    },
-    {
-        "name": "COOLORS",
-        "url": "https://coolors.co/?ref=63f4340c1d28f3000a082add",
-        "Bigtype": "美編",
-        "Smalltype": "配色",
-        "img": "https://i.imgur.com/0FIQlx7.png",
-        "svg": "",
-        "info": "Coolors.co 是一個提供豐富配色方案的網站，幫助使用者輕鬆創建精美的色彩組合。透過其直觀的界面和大量的色彩選項，您可以快速找到完美的配色方案，滿足各種設計需求。"
-    },
-    {
-        "name": "AdobeColor",
-        "url": "https://color.adobe.com/ja/create/color-wheel",
-        "Bigtype": "美編",
-        "Smalltype": "配色",
-        "img": "https://i.imgur.com/w0IXK8x.png",
-        "svg": "",
-        "info": "Adobe Color是一個功能強大的網站，提供多種色彩工具和調色板，讓用戶可以輕鬆創建美麗的配色方案。無論是設計師、藝術家還是任何需要色彩靈感的人，都可以在這個平台上找到所需的工具和資源。"
-    },
-    {
-        "name": "eggradients",
-        "url": "https://www.eggradients.com/",
-        "Bigtype": "美編",
-        "Smalltype": "配色",
-        "img": "https://i.imgur.com/74pfwak.png",
-        "svg": "",
-        "info": "提供漸層色票的網站，它提供了各種豐富的漸層色彩組合，讓使用者可以輕鬆地找到並應用於設計項目中。这些漸層色彩不僅色彩豐富，而且設計感強烈，可應用於各種設計領域。"
-    },
-    {
-        "name": "webgradients",
-        "url": "https://webgradients.com/",
-        "Bigtype": "美編",
-        "Smalltype": "配色",
-        "img": "https://i.imgur.com/1ccJqtg.png",
-        "svg": "",
-        "info": "提供漸層色票的網站，提供了各種漸層色彩的選擇，可用於網頁設計和應用程式開發。這些漸層色彩精心挑選，讓您可以輕鬆地為您的項目添加吸引人的視覺效果"
-    },
-    {
-        "name": "Pexels",
-        "url": "https://www.pexels.com/",
-        "Bigtype": "美編",
-        "Smalltype": "照片素材",
-        "img": "https://i.imgur.com/2cT4P5C.png",
-        "svg": "",
-        "info": "Pexels是一個免費的高品質圖片和影片庫，用戶可以在其中找到各種主題的圖片和影片素材，用於個人和商業用途。該網站提供了豐富的內容，讓用戶輕鬆快速地尋找到所需的素材，並且所有的素材都是免費且可以自由使用，無需註冊。"
-    },
-    {
-        "name": "Unsplash",
-        "url": "https://unsplash.com/",
-        "Bigtype": "美編",
-        "Smalltype": "照片素材",
-        "img": "https://i.imgur.com/3nPiYkY.png",
-        "svg": "",
-        "info": "Unsplash是一個知名的免費高品質圖片庫，提供了大量免費的高解析度照片素材，供個人和商業用途使用。這些照片由全球各地的攝影師提供，涵蓋了各種主題和風格，讓用戶可以輕鬆找到所需的素材。Unsplash的照片可以自由下載、修改和分享，無需註冊。"
-    },
-    {
-        "name": "Freepik",
-        "url": "https://www.freepik.com/",
-        "Bigtype": "美編",
-        "Smalltype": "照片素材",
-        "img": "https://i.imgur.com/cKeNBdE.png",
-        "svg": "",
-        "info": "reepik是一個提供免費和付費圖形設計資源的平台，其中包括矢量圖形、照片、插圖、圖標、模板等。用戶可以在Freepik上找到各種風格和主題的設計素材，用於個人和商業項目。除了免費素材外，Freepik還提供了Premium訂閱服務，用戶可以獲得更多高品質的獨家素材和功能。"
-    },
-    {
-        "name": "Figma",
-        "url": "https://www.figma.com/",
-        "Bigtype": "辦公",
-        "Smalltype": "設計",
-        "img": "",
-        "svg": "SvgFimga",
-        "info": ""
-    },
-    {
-        "name": "Github",
-        "url": "https://github.com/",
-        "Bigtype": "辦公",
-        "Smalltype": "程式控管",
-        "img": "",
-        "svg": "SvgGithub",
-        "info": ""
-    },
-    {
-        "name": "Notion",
-        "url": "https://www.notion.so/",
-        "Bigtype": "辦公",
-        "Smalltype": "筆記",
-        "img": "",
-        "svg": "SvgNotion",
-        "info": ""
-    },
-    {
-        "name": "Udemy",
-        "url": "https://www.udemy.com/",
-        "Bigtype": "辦公",
-        "Smalltype": "課程",
-        "img": "",
-        "svg": "SvgUdemy",
-        "info": ""
-    },
-    {
-        "name": "hahow",
-        "url": "https://hahow.in/",
-        "Bigtype": "辦公",
-        "Smalltype": "課程",
-        "img": "",
-        "svg": "SvgHahow",
-        "info": ""
-    },
-    {
-        "name": "Pinterest",
-        "url": "https://www.pinterest.com",
-        "Bigtype": "靈感",
-        "Smalltype": "設計",
-        "img": "https://i.imgur.com/Z5dB7E7.png",
-        "svg": "",
-        "info": "Pinterest是一個聚焦於圖片分享和收藏的社交網路平台，用戶可以在上面發現和分享各種創意靈感、優美圖片和有趣的內容。這個平台包含了各種各樣的主題板塊，讓用戶可以輕鬆地探索和保存自己感興趣的內容。"
-    },
-    {
-        "name": "Behance",
-        "url": "https://www.behance.net/",
-        "Bigtype": "靈感",
-        "Smalltype": "設計",
-        "img": "https://i.imgur.com/cPMhHyH.png",
-        "svg": "",
-        "info": "Behance是一個線上平台，旨在讓創意專業人士展示和分享其作品，包括插圖、平面設計、攝影、動畫等。該網站提供了一個獨特的社群環境，讓用戶能夠互相啟發、合作和獲得反饋。"
-    },
-    {
-        "name": "Awwards",
-        "url": "https://www.awwwards.com",
-        "Bigtype": "靈感",
-        "Smalltype": "網頁",
-        "img": "https://i.imgur.com/zGYoxZo.png",
-        "svg": "",
-        "info": "Awwwards 是一個來自日本的網頁設計平台，提供了許多優秀的網站範例與靈感。這個平台匯集了來自全球各地的設計師，展示他們的創意和技術，為網頁設計者提供了一個學習和靈感的寶庫。"
-    },
-    {
-        "name": "WebDesignClip",
-        "url": "https://webdesignclip.com",
-        "Bigtype": "靈感",
-        "Smalltype": "網頁",
-        "img": "https://i.imgur.com/jEqWE1S.png",
-        "svg": "",
-        "info": "WebDesignClip提供豐富的網頁設計資源，專注於分享來自美國的網頁設計作品。這個平台匯集了眾多具啟發性的網頁設計案例，為設計師提供了無限的靈感和學習機會。"
-    },
-    {
-        "name": "getcssscan",
-        "url": "https://getcssscan.com/css-box-shadow-examples",
-        "Bigtype": "CSS",
-        "Smalltype": "boxshadow",
-        "img": "https://i.imgur.com/g3GiRE0.png",
-        "svg": "",
-        "info": "GetCSSScan 提供了各種 CSS Box Shadow 的實例，讓您輕鬆獲得網站設計所需的陰影效果。"
-    },
-    {
-        "name": "Webdeasy",
-        "url": "https://dev.to/webdeasy/top-20-css-buttons-animations-f41",
-        "Bigtype": "CSS",
-        "Smalltype": "button",
-        "img": "https://i.imgur.com/i5oD7H1.png",
-        "svg": "",
-        "info": "這個網站提供了各種令人驚豔的 CSS 按鈕動畫，讓您的網站按鈕更加生動有趣。"
-    },
-    {
-        "name": "UberSuggest",
-        "url": "https://neilpatel.com/ubersuggest/",
-        "Bigtype": "工具",
-        "Smalltype": "SEO",
-        "img": "https://i.imgur.com/9q4WSYg.png",
-        "svg": "",
-        "info": "Ubersuggest是一個強大的SEO工具，可提供關鍵字研究、競爭分析和網站優化建議。透過詳盡的數據分析和智慧型建議，幫助用戶提升其網站在搜索引擎中的排名，提升流量和品牌曝光。"
-    },
-    {
-        "name": "Ahrefs",
-        "url": "https://ahrefs.com/",
-        "Bigtype": "工具",
-        "Smalltype": "SEO",
-        "img": "https://i.imgur.com/tyCHHCz.png",
-        "svg": "",
-        "info": "Ahrefs是一個全面的SEO工具，提供關鍵詞研究、競爭分析、排名追蹤等功能，幫助用戶優化網站並提高搜索引擎排名。"
-    },
-    {
-        "name": "UIverse",
-        "url": "https://uiverse.io/elements",
-        "Bigtype": "CSS",
-        "Smalltype": "button",
-        "img": "https://i.imgur.com/Z0I49Fr.png",
-        "svg": "",
-        "info": "這個多功能網站平台，提供豐富的功能和資源，包括社交互動、個人化設定和即時更新，讓使用者輕鬆享受多元化的網路體驗"
-    },
-    {
-        "name": "Tolgee",
-        "url": "https://tolgee.digimaxproducts.lan/projects",
-        "Bigtype": "工具",
-        "Smalltype": "翻譯管理",
-        "img": "https://i.imgur.com/c1NPIBY.png",
-        "svg": "",
-        "info": "Tolgee 是一個專注於多語言支持的網站翻譯平台，提供簡單易用的工具來管理網站和應用程序的語言翻譯。它支持實時翻譯、協作翻譯和翻譯記憶功能，幫助開發者高效地進行國際化工作，提升用戶體驗"
-    },
-    {
-        "name": "Jira",
-        "url": "https://www.atlassian.com/software/jira",
-        "Bigtype": "工具",
-        "Smalltype": "專案管理",
-        "img": "https://i.imgur.com/YTBJnw5.png",
-        "svg": "",
-        "info": "Jira 是一個由 Atlassian 提供的專業項目管理和問題追蹤平台。它幫助團隊規劃、跟蹤和管理專案進度，支持敏捷開發、需求管理和缺陷追蹤。Jira 提供靈活的工作流程設計、實時報告和協作功能，適合各類型的開發和業務團隊使用。"
-    },
-    {
-        "name": "GSAP",
-        "url": "https://gsap.com/",
-        "Bigtype": "網頁製作",
-        "Smalltype": "設計",
-        "img": "https://i.imgur.com/U2vGdJ7.png",
-        "svg": "",
-        "info": "GSAP 是一個強大的 JavaScript 動畫庫，提供高效、靈活的動畫工具。它支持創建流暢的動畫效果，兼容各大瀏覽器和設備，適合開發者用於網站和應用程序的視覺效果設計。GSAP 擁有直觀的 API、強大的時間軸功能和高效的性能，幫助實現複雜的動畫需求。"
-    },
-    {
-        "name": "Nuxt",
-        "url": "https://nuxt.com/docs/getting-started/installation",
-        "Bigtype": "Vue",
-        "Smalltype": "元件庫",
-        "img": "https://i.imgur.com/nu2nTal.png",
-        "svg": "",
-        "info": "Nuxt.js 是一個基於 Vue.js 的開源框架，用於構建高效的服務器端渲染 (SSR) 和靜態網站生成 (SSG) 應用程序。它提供了開箱即用的配置、強大的路由功能和靈活的插件系統，幫助開發者快速開發高性能的 Vue 應用，支持 SEO 優化和多種部署選項"
-    },
-    {
-        "name": "PRIMENG",
-        "url": "https://www.primefaces.org/primeng-v16-lts/installation",
-        "Bigtype": "Angular",
-        "Smalltype": "元件庫",
-        "img": "https://i.imgur.com/nzpma8N.png",
-        "svg": "",
-        "info": "PrimeNG 是一個全面的 Angular UI 組件庫，提供超過 80 個高質量的界面元件。它包括表格、圖表、表單等常用組件，幫助開發者快速構建現代化的 Angular 應用，支持豐富的功能、靈活的配置和高效的性能表現"
-    },
-    {
-        "name": "PRIMEVUE",
-        "url": "https://primevue.org/introduction/",
-        "Bigtype": "Vue",
-        "Smalltype": "元件庫",
-        "img": "https://i.imgur.com/2lTJ1uj.png",
-        "svg": "",
-        "info": "PrimeVue 是一個為 Vue.js 應用提供的高品質 UI 組件庫，包含超過 90 個可定制的界面元件。它提供表單、表格、圖表等常用組件，幫助開發者快速創建現代化的應用界面，支持響應式設計和豐富的功能擴展。"
-    }
+  {
+    "name": "TableConvert ",
+    "url": "https://tableconvert.com/zh-tw/excel-to-json",
+    "Bigtype": "工具",
+    "Smalltype": "資料轉換",
+    "img": "https://i.imgur.com/pzDfy4Q.png",
+    "svg": "",
+    "info": "TableConvert 是一個在線工具，可以將 Excel 表格輕鬆轉換為 JSON 格式。使用者只需上傳 Excel 文件或粘貼表格數據，即可生成對應的 JSON 結構。它支持自定義設置、預覽結果並下載，適合開發者和數據分析師高效處理數據轉換需求。"
+  },
+  {
+    "name": "tinypng",
+    "url": "https://tinypng.com/",
+    "Bigtype": "工具",
+    "Smalltype": "壓縮",
+    "img": "https://i.imgur.com/nlXWUkh.png",
+    "svg": "",
+    "info": "用於圖像壓縮的工具，可以幫助用戶快速壓縮圖片文件，減少文件大小而不損失品質。這個工具對於網頁開發者和設計師來說非常寶貴，能夠幫助他們優化網站性能和加快加載速度。"
+  },
+  {
+    "name": "ICOOON MONO",
+    "url": "https://icooon-mono.com/?lang=en",
+    "Bigtype": "美編",
+    "Smalltype": "Icon素材",
+    "img": "https://i.imgur.com/c75Qly8.png",
+    "svg": "",
+    "info": "在智慧型電腦、手機等裝置的普及，讓 UI/UX 引人注目，於是提供超過 6000 多種的圖標。選擇所需的插圖後，於右側能選擇線條的粗度、線條顏色（黑／白）、檔案格式類型等。"
+  },
+  {
+    "name": "Feather",
+    "url": "https://feathericons.com/",
+    "Bigtype": "美編",
+    "Smalltype": "Icon素材",
+    "img": "https://i.imgur.com/sXBBRMl.png",
+    "svg": "",
+    "info": "Feather Icons提供免費的開源圖標庫，包含各種風格和主題的簡潔向量圖標，可用於網頁、應用程式等項目中。Feather Icons的圖標設計精簡、易於使用，為專案提供豐富的圖標選擇。"
+  },
+  {
+    "name": "Material Design",
+    "url": "https://m3.material.io/",
+    "Bigtype": "美編",
+    "Smalltype": "layout",
+    "img": "https://i.imgur.com/J6E5YZ6.png",
+    "svg": "",
+    "info": "Material Design 是由 Google 推出的設計系統，旨在提供一致且美觀的用戶體驗。它結合了科技、美學和功能性，將物質的特性和虛擬界面結合，提供了一套簡潔、直觀的設計準則，適用於各種平台和裝置。"
+  },
+  {
+    "name": "ios developer",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
+    "Bigtype": "美編",
+    "Smalltype": "layout",
+    "img": "https://i.imgur.com/H90Djjb.png",
+    "svg": "",
+    "info": "Apple 開發者網站提供 iOS 人機介面指南，助您打造符合 Apple 標準的 iOS 應用程式設計。"
+  },
+  {
+    "name": "Ant design",
+    "url": "https://ant.design/index-cn",
+    "Bigtype": "美編",
+    "Smalltype": "layout",
+    "img": "https://i.imgur.com/HzTveCL.png",
+    "svg": "",
+    "info": "Ant Design是一個優秀的UI設計框架，專為React應用程序而設。它提供了一個豐富的組件庫和設計模式，使開發者可以輕鬆構建美觀且易於使用的界面。其設計風格現代簡潔，並且支持響應式設計，適用於各種設備和尺寸。"
+  },
+  {
+    "name": "いらすとや",
+    "url": "https://www.irasutoya.com/",
+    "Bigtype": "美編",
+    "Smalltype": "向量素材",
+    "img": "https://i.imgur.com/YMbw1hm.png",
+    "svg": "",
+    "info": "提供免費的高品質插畫和圖像素材，涵蓋多種主題和風格，適合用於設計、印刷和網路用途。"
+  },
+  {
+    "name": "ソコスト",
+    "url": "https://soco-st.com/",
+    "Bigtype": "美編",
+    "Smalltype": "向量素材",
+    "img": "https://i.imgur.com/bm1FvoE.png",
+    "svg": "",
+    "info": "分為生活、人物、季節／活動等 8 種類別，提供 PNG、SVG、EPS 的格式，網站下方供關鍵詞搜尋。點進所需的插畫頁面後，有儲存功能以便往後搜尋，能還將插圖的部分區域更換為需要的顏色。"
+  },
+  {
+    "name": "イラストセンター",
+    "url": "https://illustcenter.com/",
+    "Bigtype": "美編",
+    "Smalltype": "向量素材",
+    "img": "https://i.imgur.com/cNw2iWn.png",
+    "svg": "",
+    "info": "插圖線條、顏色溫潤，網站底部有更詳細的分類以便找尋，左側則有人氣插畫可供參考。點進所需的插畫頁面後，下方有相關插畫能延伸搜尋。"
+  },
+  {
+    "name": "Vector Shelf",
+    "url": "https://vectorshelf.com/",
+    "Bigtype": "美編",
+    "Smalltype": "向量素材",
+    "img": "https://i.imgur.com/nqcidHV.png",
+    "svg": "",
+    "info": "插圖為線條感的手繪風，分為飲料、食物、商品、信件等七種類別，點進所需的插畫頁面後，僅一鍵就能下載。"
+  },
+  {
+    "name": "Undraw",
+    "url": "https://undraw.co/illustrations",
+    "Bigtype": "美編",
+    "Smalltype": "向量素材",
+    "img": "https://i.imgur.com/LTgVCAW.png",
+    "svg": "",
+    "info": "Undraw提供免費、可定制的插圖，涵蓋多樣主題和風格，讓使用者可根據需求自由編輯和應用。Undraw的插圖操作簡便，為專案增添個性化與創意。"
+  },
+  {
+    "name": "Colorhunt",
+    "url": "https://colorhunt.co/",
+    "Bigtype": "美編",
+    "Smalltype": "配色",
+    "img": "https://i.imgur.com/M0Ishl2.png",
+    "svg": "",
+    "info": "Colorhunt 是一個提供精心挑選的配色方案的網站，擁有各種風格和主題的色彩選擇。從簡約到豐富，從明亮到柔和，Colorhunt 提供了豐富的選擇，讓您輕鬆找到適合您設計需求的理想配色方案"
+  },
+  {
+    "name": "COOLORS",
+    "url": "https://coolors.co/?ref=63f4340c1d28f3000a082add",
+    "Bigtype": "美編",
+    "Smalltype": "配色",
+    "img": "https://i.imgur.com/0FIQlx7.png",
+    "svg": "",
+    "info": "Coolors.co 是一個提供豐富配色方案的網站，幫助使用者輕鬆創建精美的色彩組合。透過其直觀的界面和大量的色彩選項，您可以快速找到完美的配色方案，滿足各種設計需求。"
+  },
+  {
+    "name": "AdobeColor",
+    "url": "https://color.adobe.com/ja/create/color-wheel",
+    "Bigtype": "美編",
+    "Smalltype": "配色",
+    "img": "https://i.imgur.com/w0IXK8x.png",
+    "svg": "",
+    "info": "Adobe Color是一個功能強大的網站，提供多種色彩工具和調色板，讓用戶可以輕鬆創建美麗的配色方案。無論是設計師、藝術家還是任何需要色彩靈感的人，都可以在這個平台上找到所需的工具和資源。"
+  },
+  {
+    "name": "eggradients",
+    "url": "https://www.eggradients.com/",
+    "Bigtype": "美編",
+    "Smalltype": "配色",
+    "img": "https://i.imgur.com/74pfwak.png",
+    "svg": "",
+    "info": "提供漸層色票的網站，它提供了各種豐富的漸層色彩組合，讓使用者可以輕鬆地找到並應用於設計項目中。这些漸層色彩不僅色彩豐富，而且設計感強烈，可應用於各種設計領域。"
+  },
+  {
+    "name": "webgradients",
+    "url": "https://webgradients.com/",
+    "Bigtype": "美編",
+    "Smalltype": "配色",
+    "img": "https://i.imgur.com/1ccJqtg.png",
+    "svg": "",
+    "info": "提供漸層色票的網站，提供了各種漸層色彩的選擇，可用於網頁設計和應用程式開發。這些漸層色彩精心挑選，讓您可以輕鬆地為您的項目添加吸引人的視覺效果"
+  },
+  {
+    "name": "Pexels",
+    "url": "https://www.pexels.com/",
+    "Bigtype": "美編",
+    "Smalltype": "照片素材",
+    "img": "https://i.imgur.com/2cT4P5C.png",
+    "svg": "",
+    "info": "Pexels是一個免費的高品質圖片和影片庫，用戶可以在其中找到各種主題的圖片和影片素材，用於個人和商業用途。該網站提供了豐富的內容，讓用戶輕鬆快速地尋找到所需的素材，並且所有的素材都是免費且可以自由使用，無需註冊。"
+  },
+  {
+    "name": "Unsplash",
+    "url": "https://unsplash.com/",
+    "Bigtype": "美編",
+    "Smalltype": "照片素材",
+    "img": "https://i.imgur.com/3nPiYkY.png",
+    "svg": "",
+    "info": "Unsplash是一個知名的免費高品質圖片庫，提供了大量免費的高解析度照片素材，供個人和商業用途使用。這些照片由全球各地的攝影師提供，涵蓋了各種主題和風格，讓用戶可以輕鬆找到所需的素材。Unsplash的照片可以自由下載、修改和分享，無需註冊。"
+  },
+  {
+    "name": "Freepik",
+    "url": "https://www.freepik.com/",
+    "Bigtype": "美編",
+    "Smalltype": "照片素材",
+    "img": "https://i.imgur.com/cKeNBdE.png",
+    "svg": "",
+    "info": "reepik是一個提供免費和付費圖形設計資源的平台，其中包括矢量圖形、照片、插圖、圖標、模板等。用戶可以在Freepik上找到各種風格和主題的設計素材，用於個人和商業項目。除了免費素材外，Freepik還提供了Premium訂閱服務，用戶可以獲得更多高品質的獨家素材和功能。"
+  },
+  {
+    "name": "Figma",
+    "url": "https://www.figma.com/",
+    "Bigtype": "辦公",
+    "Smalltype": "設計",
+    "img": "",
+    "svg": "SvgFimga",
+    "info": "網頁設計平台"
+  },
+  {
+    "name": "Github",
+    "url": "https://github.com/",
+    "Bigtype": "辦公",
+    "Smalltype": "程式控管",
+    "img": "",
+    "svg": "SvgGithub",
+    "info": "Code專案版控管理"
+  },
+  {
+    "name": "Notion",
+    "url": "https://www.notion.so/",
+    "Bigtype": "辦公",
+    "Smalltype": "筆記",
+    "img": "",
+    "svg": "SvgNotion",
+    "info": "紀錄程式以外的筆記",
+    "isTooltipVisible": false
+  },
+  {
+    "name": "hackmd",
+    "url": "https://hackmd.io/?nav=overview",
+    "Bigtype": "辦公",
+    "Smalltype": "筆記",
+    "img": "",
+    "svg": "HackMD",
+    "info": "紀錄程式的筆記"
+  },
+  {
+    "name": "Udemy",
+    "url": "https://www.udemy.com/",
+    "Bigtype": "辦公",
+    "Smalltype": "課程",
+    "img": "",
+    "svg": "SvgUdemy",
+    "info": "全球線上課程"
+  },
+  {
+    "name": "hahow",
+    "url": "https://hahow.in/",
+    "Bigtype": "辦公",
+    "Smalltype": "課程",
+    "img": "",
+    "svg": "SvgHahow",
+    "info": "中文線上課程"
+  },
+
+  {
+    "name": "Pinterest",
+    "url": "https://www.pinterest.com",
+    "Bigtype": "靈感",
+    "Smalltype": "設計",
+    "img": "https://i.imgur.com/Z5dB7E7.png",
+    "svg": "",
+    "info": "Pinterest是一個聚焦於圖片分享和收藏的社交網路平台，用戶可以在上面發現和分享各種創意靈感、優美圖片和有趣的內容。這個平台包含了各種各樣的主題板塊，讓用戶可以輕鬆地探索和保存自己感興趣的內容。"
+  },
+  {
+    "name": "Behance",
+    "url": "https://www.behance.net/",
+    "Bigtype": "靈感",
+    "Smalltype": "設計",
+    "img": "https://i.imgur.com/cPMhHyH.png",
+    "svg": "",
+    "info": "Behance是一個線上平台，旨在讓創意專業人士展示和分享其作品，包括插圖、平面設計、攝影、動畫等。該網站提供了一個獨特的社群環境，讓用戶能夠互相啟發、合作和獲得反饋。"
+  },
+  {
+    "name": "Awwards",
+    "url": "https://www.awwwards.com",
+    "Bigtype": "靈感",
+    "Smalltype": "網頁",
+    "img": "https://i.imgur.com/zGYoxZo.png",
+    "svg": "",
+    "info": "Awwwards 是一個來自日本的網頁設計平台，提供了許多優秀的網站範例與靈感。這個平台匯集了來自全球各地的設計師，展示他們的創意和技術，為網頁設計者提供了一個學習和靈感的寶庫。"
+  },
+  {
+    "name": "WebDesignClip",
+    "url": "https://webdesignclip.com",
+    "Bigtype": "靈感",
+    "Smalltype": "網頁",
+    "img": "https://i.imgur.com/jEqWE1S.png",
+    "svg": "",
+    "info": "WebDesignClip提供豐富的網頁設計資源，專注於分享來自美國的網頁設計作品。這個平台匯集了眾多具啟發性的網頁設計案例，為設計師提供了無限的靈感和學習機會。"
+  },
+  {
+    "name": "getcssscan",
+    "url": "https://getcssscan.com/css-box-shadow-examples",
+    "Bigtype": "CSS",
+    "Smalltype": "boxshadow",
+    "img": "https://i.imgur.com/g3GiRE0.png",
+    "svg": "",
+    "info": "GetCSSScan 提供了各種 CSS Box Shadow 的實例，讓您輕鬆獲得網站設計所需的陰影效果。"
+  },
+  {
+    "name": "Webdeasy",
+    "url": "https://dev.to/webdeasy/top-20-css-buttons-animations-f41",
+    "Bigtype": "CSS",
+    "Smalltype": "button",
+    "img": "https://i.imgur.com/i5oD7H1.png",
+    "svg": "",
+    "info": "這個網站提供了各種令人驚豔的 CSS 按鈕動畫，讓您的網站按鈕更加生動有趣。"
+  },
+  {
+    "name": "UberSuggest",
+    "url": "https://neilpatel.com/ubersuggest/",
+    "Bigtype": "工具",
+    "Smalltype": "SEO",
+    "img": "https://i.imgur.com/9q4WSYg.png",
+    "svg": "",
+    "info": "Ubersuggest是一個強大的SEO工具，可提供關鍵字研究、競爭分析和網站優化建議。透過詳盡的數據分析和智慧型建議，幫助用戶提升其網站在搜索引擎中的排名，提升流量和品牌曝光。"
+  },
+  {
+    "name": "Ahrefs",
+    "url": "https://ahrefs.com/",
+    "Bigtype": "工具",
+    "Smalltype": "SEO",
+    "img": "https://i.imgur.com/tyCHHCz.png",
+    "svg": "",
+    "info": "Ahrefs是一個全面的SEO工具，提供關鍵詞研究、競爭分析、排名追蹤等功能，幫助用戶優化網站並提高搜索引擎排名。"
+  },
+  {
+    "name": "UIverse",
+    "url": "https://uiverse.io/elements",
+    "Bigtype": "CSS",
+    "Smalltype": "button",
+    "img": "https://i.imgur.com/Z0I49Fr.png",
+    "svg": "",
+    "info": "這個多功能網站平台，提供豐富的功能和資源，包括社交互動、個人化設定和即時更新，讓使用者輕鬆享受多元化的網路體驗"
+  },
+  {
+    "name": "Tolgee",
+    "url": "https://tolgee.digimaxproducts.lan/projects",
+    "Bigtype": "工具",
+    "Smalltype": "翻譯管理",
+    "img": "https://i.imgur.com/c1NPIBY.png",
+    "svg": "",
+    "info": "Tolgee 是一個專注於多語言支持的網站翻譯平台，提供簡單易用的工具來管理網站和應用程序的語言翻譯。它支持實時翻譯、協作翻譯和翻譯記憶功能，幫助開發者高效地進行國際化工作，提升用戶體驗"
+  },
+  {
+    "name": "Jira",
+    "url": "https://www.atlassian.com/software/jira",
+    "Bigtype": "工具",
+    "Smalltype": "專案管理",
+    "img": "https://i.imgur.com/YTBJnw5.png",
+    "svg": "",
+    "info": "Jira 是一個由 Atlassian 提供的專業項目管理和問題追蹤平台。它幫助團隊規劃、跟蹤和管理專案進度，支持敏捷開發、需求管理和缺陷追蹤。Jira 提供靈活的工作流程設計、實時報告和協作功能，適合各類型的開發和業務團隊使用。"
+  },
+  {
+    "name": "GSAP",
+    "url": "https://gsap.com/",
+    "Bigtype": "網頁製作",
+    "Smalltype": "設計",
+    "img": "https://i.imgur.com/U2vGdJ7.png",
+    "svg": "",
+    "info": "GSAP 是一個強大的 JavaScript 動畫庫，提供高效、靈活的動畫工具。它支持創建流暢的動畫效果，兼容各大瀏覽器和設備，適合開發者用於網站和應用程序的視覺效果設計。GSAP 擁有直觀的 API、強大的時間軸功能和高效的性能，幫助實現複雜的動畫需求。"
+  },
+  {
+    "name": "Nuxt",
+    "url": "https://nuxt.com/docs/getting-started/installation",
+    "Bigtype": "Vue",
+    "Smalltype": "元件庫",
+    "img": "https://i.imgur.com/nu2nTal.png",
+    "svg": "",
+    "info": "Nuxt.js 是一個基於 Vue.js 的開源框架，用於構建高效的服務器端渲染 (SSR) 和靜態網站生成 (SSG) 應用程序。它提供了開箱即用的配置、強大的路由功能和靈活的插件系統，幫助開發者快速開發高性能的 Vue 應用，支持 SEO 優化和多種部署選項"
+  },
+  {
+    "name": "PRIMENG",
+    "url": "https://www.primefaces.org/primeng-v16-lts/installation",
+    "Bigtype": "Angular",
+    "Smalltype": "元件庫",
+    "img": "https://i.imgur.com/nzpma8N.png",
+    "svg": "",
+    "info": "PrimeNG 是一個全面的 Angular UI 組件庫，提供超過 80 個高質量的界面元件。它包括表格、圖表、表單等常用組件，幫助開發者快速構建現代化的 Angular 應用，支持豐富的功能、靈活的配置和高效的性能表現"
+  },
+  {
+    "name": "PRIMEVUE",
+    "url": "https://primevue.org/introduction/",
+    "Bigtype": "Vue",
+    "Smalltype": "元件庫",
+    "img": "https://i.imgur.com/2lTJ1uj.png",
+    "svg": "",
+    "info": "PrimeVue 是一個為 Vue.js 應用提供的高品質 UI 組件庫，包含超過 90 個可定制的界面元件。它提供表單、表格、圖表等常用組件，幫助開發者快速創建現代化的應用界面，支持響應式設計和豐富的功能擴展。"
+  }
 ]

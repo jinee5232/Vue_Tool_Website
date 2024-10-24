@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 200px">
+  <div style="margin-top: 200px" v-if="filteredWebData.length !== 0">
     <div class="btn_box">
       <div class="checkbox-wrapper-63">
         <label class="switch">
@@ -80,6 +80,18 @@
       </div>
     </div>
   </div>
+  <div tyle="margin-top: 200px" v-if="filteredWebData.length === 0">
+    <h1 style="color: black">{ filteredWebData }</h1>
+    <h1>No Data</h1>
+    <div>
+      <h1 style="color: black">{ filteredWebData }</h1>
+      <h1>No Data</h1>
+      <img
+        src="https://i.pinimg.com/originals/ef/2f/6f/ef2f6f465754178bcfa9cc5ff48203e7.gif"
+        alt=""
+      />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -123,10 +135,12 @@ export default {
         }
         grouped[item.subType].push(item);
       });
+      console.log(this.filteredWebData);
       return grouped;
     },
     filteredWebData() {
       const type = this.$route.params.type;
+
       return this.webData
         .filter((item) => item.Bigtype.includes(type))
         .map((item) => ({
