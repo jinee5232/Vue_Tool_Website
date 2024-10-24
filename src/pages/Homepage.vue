@@ -71,7 +71,6 @@ export default {
   methods: {
     showTooltip(index) {
       this.filteredWebData[index].isTooltipVisible = true;
-      console.log(this.webData[index].isTooltipVisible);
     },
     hideTooltip(index) {
       this.filteredWebData[index].isTooltipVisible = false;
