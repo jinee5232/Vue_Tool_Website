@@ -233,6 +233,7 @@ export default {
   transition: fill 0.3s linear;
   animation: card 3s forwards;
   animation-duration: 2s;
+  mix-blend-mode: exclusion;
   a {
     width: 100%;
     height: 100%;
@@ -241,6 +242,7 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
       rgba(0, 0, 0, 0.05) 0px 5px 10px;
     background-color: rgba(255, 255, 255);
+    mix-blend-mode: normal;
     .SVGclore {
       fill: rgb(125, 165, 106);
     }
