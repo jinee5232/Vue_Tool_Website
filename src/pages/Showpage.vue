@@ -14,8 +14,25 @@
     </div>
 
     <div v-show="layout === true">
+      <div class="tag-filter-container">
+        <span
+          v-for="tag in allTags"
+          :key="tag"
+          :class="['tag-item', { active: selectedTags.includes(tag) }]"
+          @click="toggleTag(tag)"
+        >
+          {{ tag }}
+        </span>
+        <button
+          v-if="selectedTags.length > 0"
+          @click="selectedTags = []"
+          class="clear-btn"
+        >
+          清除全部
+        </button>
+      </div>
       <div class="card-container">
-        <div v-for="(item, index) in filteredWebData" :key="index" class="card">
+        <div v-for="(item, index) in displayedCards" :key="index" class="card">
           <a :href="item.url" target="_blank">
             <div class="card-imgbox">
               <img
@@ -100,10 +117,12 @@ export default {
     return {
       webData: [],
       layout: true,
+      selectedTags: [], // 儲存選中的 tag
       slidesPerView:
         window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 2 : 3,
     };
   },
+
   components: {
     Swiper,
     SwiperSlide,
@@ -120,6 +139,21 @@ export default {
     };
   },
   computed: {
+    // 1. 獲取當前大類下所有的子標籤 (用於渲染按鈕)
+    allTags() {
+      const tags = this.filteredWebData.map((item) => item.subType);
+      return [...new Set(tags)]; // 去重
+    },
+
+    // 2. 這是最終渲染在 Single Layout 上的資料
+    displayedCards() {
+      if (this.selectedTags.length === 0) {
+        return this.filteredWebData;
+      }
+      return this.filteredWebData.filter((item) =>
+        this.selectedTags.includes(item.subType),
+      );
+    },
     groupedData() {
       const grouped = {};
       this.filteredWebData.forEach((item) => {
@@ -147,11 +181,23 @@ export default {
   },
   watch: {
     "$route.params.type": "fetchWebData",
+    "$route.params.type"() {
+      this.selectedTags = []; // 切換大類時清空選中標籤
+      this.fetchWebData();
+    },
   },
   mounted() {
     this.fetchWebData();
   },
   methods: {
+    toggleTag(tag) {
+      const index = this.selectedTags.indexOf(tag);
+      if (index > -1) {
+        this.selectedTags.splice(index, 1); // 如果已選中，則移除
+      } else {
+        this.selectedTags.push(tag); // 如果未選中，則加入
+      }
+    },
     updateSlidesPerView() {
       this.slidesPerView =
         window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 2 : 3;
@@ -294,7 +340,8 @@ export default {
     outline: none;
   }
   &:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    box-shadow:
+      rgba(0, 0, 0, 0.15) 0px 15px 25px,
       rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
 }
@@ -532,5 +579,42 @@ export default {
 .checkbox-wrapper-63 input:checked + .slider::before {
   transform: translateX(2em);
   background: lightgreen;
+}
+.tag-filter-container {
+  width: 80vw;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag-item {
+  padding: 6px 15px;
+  border: 1px solid #277988;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #277988;
+  transition: all 0.3s;
+  font-weight: 600;
+  user-select: none;
+}
+
+.tag-item:hover {
+  background-color: rgba(39, 121, 136, 0.1);
+}
+
+.tag-item.active {
+  background-color: #277988;
+  color: #fff;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #666;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
 }
 </style>
