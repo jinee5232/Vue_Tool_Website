@@ -330,7 +330,9 @@ header nav {
     overflow: hidden;
     max-height: 10px;
     transform-origin: top;
-    transition: opacity 1s ease, max-height 1s ease;
+    transition:
+      opacity 1s ease,
+      max-height 1s ease;
     a {
       padding: 0 2rem;
       color: #2574ad;
@@ -610,6 +612,21 @@ header nav {
     line-height: 36px;
     font-size: 18px;
   }
+}
+.menu a.router-link-exact-active {
+  color: #f7d518 !important; /* 金黃色 */
+}
+
+.menu a.router-link-exact-active:before {
+  width: 100%; /* 強制顯示底線 */
+  left: 0;
+  background-color: #f7d518;
+}
+
+/* 側邊欄（手機版）當前頁面變色 */
+.hameSidebar .router-link-exact-active {
+  color: #f7d518 !important;
+  font-weight: bold;
 }
 @keyframes upIn {
   from {
