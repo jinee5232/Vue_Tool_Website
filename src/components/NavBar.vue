@@ -59,7 +59,7 @@
             </li>
           </ul>
         </nav>
-        <button type="button" class="menuOpenBtn" @click="hamOpen = !hamOpen">
+        <button type="button" class="menuOpenBtn" :class="{ 'open': hamOpen }" @click="hamOpen = !hamOpen">
           <span></span>
         </button>
       </div>
@@ -177,466 +177,385 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 .header_bg {
   position: fixed;
   width: 100vw;
   top: 0;
   left: 0;
-  z-index: 90;
+  z-index: 1000;
 }
+
 *:focus {
   outline: none;
 }
+
 .menuOpenBtn:after,
 .menuOpenBtn:before,
 .menuOpenBtn span,
 .menu a:before,
-.slideMenu a:before,
-.slideMenuBox,
-body a,
-footer .goTop svg,
 .header,
 .meow-logo,
 .nbFont,
-.header .wrap {
-  transition: all 0.5s ease-out;
+.header .wrap,
+.ItemDrop,
+.hameSidebar,
+.SideItemDrop {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.pageContainer {
-  padding-top: 135px;
-}
-@media (max-width: 64em) {
-  .pageContainer {
-    padding-top: 60px;
-  }
-}
+
 .wrap {
   max-width: 68.75em;
   position: relative;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  margin: 0 auto;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
 }
+
 @media (max-width: 68.75em) {
   .wrap {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
+
 body a {
   text-decoration: none;
 }
+
 .header {
   position: relative;
   width: 100%;
-  /* background-color: #fff; */
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .header.isTop {
-  box-shadow: 0 0 0 transparent;
+  background-color: transparent;
+  box-shadow: none;
 }
+
 .header.isTop .wrap {
-  height: 135px;
-}
-@media (max-width: 64em) {
-  header.isTop .wrap {
-    height: 60px;
-  }
+  height: 100px;
 }
 
-@media (max-width: 111.25em) {
-  header .wrap {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-header nav {
-  flex-grow: 1;
-  padding-right: 3rem;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-.hameSidebar {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 300px;
-  height: calc(100vh - 100%);
-  background-color: #e97575;
-  text-align: center;
-  z-index: 50;
-  animation: rightIn 0.3s forwards;
-
-  ul {
-    list-style-type: none;
-    height: 100%;
-    li {
-      line-height: 24px;
-      display: block;
-      font-size: 20px;
-      margin-right: 2rem;
-      color: #202020;
-      &:hover {
-        color: #f7d518;
-      }
-      .nbFont {
-        color: #ffffff;
-        &:hover {
-          color: #f7d518;
-        }
-      }
-    }
-  }
-}
-@keyframes rightIn {
-  from {
-    transform: translate3d(20%, 0, 0);
-  }
-
-  to {
-    transform: none;
-  }
-}
-.dropdownItem {
-  line-height: 50px;
-  display: block;
-  padding: 10px 8px;
-  color: #f4edcc;
-  font-size: 24px;
-  font-weight: 600;
-  position: relative;
-  &:hover {
-    color: #ffffff;
-    .ItemDrop {
-      opacity: 1;
-      max-height: 400px;
-    }
-  }
-
-  .ItemDrop {
-    position: absolute;
-    z-index: 203;
-    width: 150px;
-    left: -25%;
-    top: 100%;
-    background-color: #f1b0b0;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    max-height: 10px;
-    transform-origin: top;
-    transition:
-      opacity 1s ease,
-      max-height 1s ease;
-    a {
-      padding: 0 2rem;
-      color: #2574ad;
-      font-size: 1rem;
-    }
-  }
-  .ItemDrop a:hover {
-    background-color: #86a3b8;
-    color: #b11717;
-  }
-  .ItemDrop a:before {
-    display: none;
-  }
-}
-
-@media (max-width: 64em) {
-  .header .socialList {
-    display: none;
-  }
-}
-@media (min-width: 75.0625em) {
-  .header .socialList > li + li {
-    margin-left: 0.9375em;
-  }
-}
-@media (max-width: 75em) {
-  .header .socialList > li + li {
-    margin-left: 0.125em;
-  }
-}
-
-@media (min-width: 25.0625em) {
-  .logo a:after {
-    margin-left: 12px;
-    padding-bottom: 2px;
-    color: #939293;
-  }
-}
-.wrap {
-  max-width: 68.75em;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (max-width: 68.75em) {
-  .wrap {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
 @media (max-width: 64em) {
   .header.isTop .wrap {
+    height: 70px;
+  }
+}
+
+.header.shrink {
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--nav-shadow);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.header.shrink .wrap {
+  height: 70px;
+}
+
+@media (max-width: 64em) {
+  .header.shrink .wrap {
     height: 60px;
   }
 }
-.header-logo {
-  width: 50%;
-  height: auto;
+
+.header.page1-nav.isTop {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.logoHigh {
-  width: 80%;
-  height: auto;
+
+.header.default-nav {
+  background-color: var(--nav-bg);
+  box-shadow: var(--nav-shadow);
+  border-bottom: 1px solid var(--nav-border);
 }
+
 .header .wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 111.25em;
-  width: 100%;
-  height: 80px;
 }
 
-/* .logo img {
-  width: 50%;
-  height: auto;
-} */
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
+.logoHigh {
+  height: 60px;
+  width: auto;
+}
+
+header nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .menu {
   display: flex;
   justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
 @media (max-width: 75em) {
   .menu {
     display: none;
   }
 }
+
 .menu > li {
   position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
 }
 
-.menu li {
-  margin: 0 20px;
-  padding: 0 auto;
-}
 .menu a {
   position: relative;
   display: block;
-  padding: 10px 8px;
-  color: #f4edcc;
-  font-size: 24px;
-  font-weight: 600;
+  padding: 8px 12px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
 }
-.menu a.current,
-.menu a:hover {
-  color: #ffffff;
+
+.header.shrink .menu a, 
+.header.default-nav .menu a {
+  color: var(--text-primary);
 }
-.menu a.current:before,
-.menu a:hover:before {
-  right: auto;
-  left: 0;
-  width: 100%;
-}
+
 .menu a:before {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
-  z-index: 1;
-  width: 0;
-  height: 5px;
-  background-color: #a4ce95;
+  width: 0%;
+  height: 3px;
+  background-color: var(--brand-color);
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
-.socialList {
-  display: flex;
+
+.menu a:hover:before, a.router-link-exact-active:before {
+  width: 100%;
+}
+
+.menu a:hover, a.router-link-exact-active {
+  color: var(--brand-color) !important;
+}
+
+/* Distinct Dropdown Button Styling */
+.dropdownItem > div > .nbFont {
+  position: relative;
+  display: inline-flex;
   align-items: center;
-}
-.socialList a {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #b3b3b3;
-  background-color: #fff;
+  padding: 8px 24px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff !important;
+  background-color: var(--brand-color);
+  border-radius: 24px;
+  border: 2px solid var(--brand-color);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 20;
 }
-.socialList a:hover {
-  color: #4974ae;
+
+.dropdownItem:hover > div > .nbFont {
+  background-color: var(--card-bg);
+  color: var(--brand-color) !important;
+  border-color: var(--brand-color);
 }
+
+/* Remove arrow */
+.dropdownItem > div > .nbFont::after {
+  display: none !important;
+}
+
+.dropdownItem {
+  position: relative;
+  padding: 10px 0;
+}
+
+/* The Detached Premium Glass Stub/Tongue */
+.dropdownItem .ItemDrop {
+  position: absolute;
+  top: 56px; /* Transparent gap below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px; /* Same visual width as button */
+  background: var(--brand-color-transparent); /* Dynamic Brand Glass */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: none; /* No top border */
+  border-radius: 0 0 16px 16px; 
+  box-shadow: 0 10px 30px var(--brand-color-hover); /* Tinted shadow */
+  overflow: hidden;
+  box-sizing: border-box;
+  
+  padding-top: 20px; /* The visible stub height */
+  max-height: 20px; /* Clips the interior so only the stub peeks out initially */
+  transition: max-height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.dropdownItem:hover .ItemDrop {
+  max-height: 400px;
+  pointer-events: auto;
+}
+
+.ItemDrop a {
+  padding: 12px 20px;
+  color: #ffffff !important; /* White text */
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.ItemDrop a:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* White glassy hover */
+  color: #ffffff !important;
+}
+
+.ItemDrop a:before {
+  display: none !important;
+}
+
 .menuOpenBtn {
   position: relative;
   width: 40px;
   height: 40px;
-  margin-right: 2rem;
   padding: 0;
   border: none;
   cursor: pointer;
   background-color: transparent;
+  z-index: 2000;
 }
+
 @media (min-width: 75em) {
   .menuOpenBtn {
     display: none;
   }
 }
-.menuOpenBtn.open span {
-  width: 0;
+
+.menuOpenBtn span, 
+.menuOpenBtn:before, 
+.menuOpenBtn:after {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 24px; height: 2px;
+  margin-left: -12px; margin-top: -1px;
+  background-color: #ffffff;
+  content: "";
 }
+
+.header.shrink .menuOpenBtn span, 
+.header.shrink .menuOpenBtn:before, 
+.header.shrink .menuOpenBtn:after,
+.header.default-nav .menuOpenBtn span, 
+.header.default-nav .menuOpenBtn:before, 
+.header.default-nav .menuOpenBtn:after {
+  background-color: var(--text-primary);
+}
+
+.menuOpenBtn:before { transform: translateY(-8px); }
+.menuOpenBtn:after { transform: translateY(8px); }
+
+.menuOpenBtn.open span { width: 0; }
 .menuOpenBtn.open:before {
   transform: rotate(-45deg);
+  background-color: var(--text-primary) !important;
 }
 .menuOpenBtn.open:after {
   transform: rotate(45deg);
-}
-.menuOpenBtn:after,
-.menuOpenBtn:before,
-.menuOpenBtn span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  width: 24px;
-  height: 2px;
-  margin-left: -12px;
-  margin-top: 0.5px;
-  background-color: #ffffff;
-}
-.menuOpenBtn:after,
-.menuOpenBtn:before {
-  content: "";
-}
-.menuOpenBtn:before {
-  transform: translateY(-8px);
-}
-.menuOpenBtn:after {
-  transform: translateY(8px);
+  background-color: var(--text-primary) !important;
 }
 
-/* 主訴求 */
-.header .demand {
-  margin: 20px auto;
-  font-size: 32px;
-  display: flex;
-  flex-direction: column;
-}
-
-.header h2 {
-  margin: 100px auto 30px auto;
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.header p {
-  margin: 5px auto;
-  font-size: 32px;
-}
-
-.header li {
-  box-sizing: border-box;
-  padding: 20px 0;
-}
-
-.header li img {
-  width: 600px;
-  height: 400px;
-}
-
-.timeline-box {
-  width: 650px;
-  height: 450px;
-}
-
-.intro {
-  width: 600px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.timeline li:nth-child(odd) {
-  float: left;
-  padding-right: 100px;
-}
-
-.timeline li:nth-child(even) {
-  float: right;
-  /* padding-left: 10px; */
-  padding-left: 100px;
-}
-
-.timeline li::after {
-  content: "";
-  position: relative;
-  width: 2px;
-  height: 100%;
-  background-color: #404040;
-}
-/* .timeline li:nth-child(odd) {
-  padding-right: 100px;
-} */
-.isTop {
-  padding: 20px 0;
-}
-.header.shrink {
-  padding: 10px 0;
-  background-color: #1b3c73;
-}
-.default-nav {
-  background-color: #5f5d9c;
-}
-.page1-nav {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.SideItemDrop {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
+.hameSidebar {
+  position: fixed;
+  top: 0; right: 0;
+  width: min(300px, 85vw);
+  height: 100vh;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.2);
   text-align: left;
-  animation: upIn 0.3s forwards;
-  transform-origin: top;
-
-  a {
-    padding: 0 2rem;
-    width: 100%;
-    background-color: white;
-    color: #678f59;
-    line-height: 36px;
-    font-size: 18px;
-  }
-}
-.menu a.router-link-exact-active {
-  color: #f7d518 !important; /* 金黃色 */
+  z-index: 1000;
+  padding-top: 100px;
+  overflow-y: auto;
+  animation: rightIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
-.menu a.router-link-exact-active:before {
-  width: 100%; /* 強制顯示底線 */
-  left: 0;
-  background-color: #f7d518;
+@keyframes rightIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }
 
-/* 側邊欄（手機版）當前頁面變色 */
+.hameSidebar ul {
+  list-style-type: none;
+  padding: 0 30px;
+}
+
+.hameSidebar li {
+  margin-bottom: 20px;
+}
+
+.hameSidebar .nbFont, .hameSidebar a {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.hameSidebar .nbFont:hover, .hameSidebar a:hover,
 .hameSidebar .router-link-exact-active {
-  color: #f7d518 !important;
-  font-weight: bold;
+  color: #277988 !important;
 }
-@keyframes upIn {
-  from {
-    transform: scaleY(0);
-    opacity: 0;
-  }
 
-  to {
-    transform: scaleY(100%);
-    opacity: 1;
-  }
+.SideItemDrop {
+  margin-top: 10px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 10px;
+  animation: slideDown 0.3s ease forwards;
+  transform-origin: top;
+}
+
+@keyframes slideDown {
+  from { transform: scaleY(0); opacity: 0; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+
+.SideItemDrop a {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #5a6c7d !important;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+.SideItemDrop a:hover {
+  filter: brightness(0.8);
 }
 </style>

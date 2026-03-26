@@ -64,7 +64,7 @@
         <h2 v-else class="group_title groupmove2">{{ subType }}</h2>
         <swiper
           :slidesPerView="slidesPerView"
-          :spaceBetween="30"
+          :spaceBetween="swiperGap"
           :pagination="{
             clickable: true,
           }"
@@ -117,9 +117,9 @@ export default {
     return {
       webData: [],
       layout: true,
-      selectedTags: [], // 儲存選中的 tag
-      slidesPerView:
-        window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 2 : 3,
+      selectedTags: [],
+      slidesPerView: 3,
+      swiperGap: 30,
     };
   },
 
@@ -128,6 +128,7 @@ export default {
     SwiperSlide,
   },
   created() {
+    this.updateSlidesPerView();
     window.addEventListener("resize", this.updateSlidesPerView);
   },
   beforeDestroy() {
@@ -199,8 +200,25 @@ export default {
       }
     },
     updateSlidesPerView() {
-      this.slidesPerView =
-        window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 2 : 3;
+      const w = window.innerWidth;
+      let containerWidth, minItemWidth, gap;
+
+      if (w <= 800) {
+        containerWidth = w * 0.9; // matches .swiper { width: 90vw }
+        minItemWidth = 280;
+        gap = 20;
+      } else {
+        containerWidth = w * 0.8; // matches .swiper { width: 80vw }
+        minItemWidth = 300;
+        gap = 30;
+      }
+
+      // Exact mathematical formula mirroring CSS grid auto-fill logic
+      let columns = Math.floor((containerWidth + gap) / (minItemWidth + gap));
+      if (columns < 1) columns = 1;
+
+      this.slidesPerView = columns;
+      this.swiperGap = gap;
     },
     async fetchWebData() {
       try {
@@ -224,13 +242,12 @@ export default {
   justify-content: center;
 }
 .btn_box {
-  width: 100%;
+  width: 80vw;
   display: flex;
   box-sizing: border-box;
   align-items: center;
-  margin: 0 auto;
-  padding-left: 10%;
-  margin-bottom: 50px;
+  margin: 0 auto 30px auto;
+  padding: 0;
   button {
     width: 50px;
     height: 50px;
@@ -243,289 +260,199 @@ export default {
 .group {
   width: 80vw;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   text-align: center;
+  
   .group_title {
-    color: #ffffff;
-    font-size: 80px;
-    line-height: 100px;
-    font-weight: bolder;
+    color: var(--group-title);
+    font-size: clamp(24px, 5vw, 36px);
+    line-height: 1.2;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 40px;
     position: relative;
-    &::before {
+    display: inline-block;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    
+    &::after {
+      content: '';
       position: absolute;
-      content: "";
-      z-index: -1;
-      bottom: 0;
-      height: 100%; /* 设置伪元素的高度 */
-      width: 100%; /* 设置伪元素的宽度 */
-      transform: scaleX(0);
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background-color: var(--brand-color);
+      border-radius: 4px;
     }
   }
 }
-.groupmove::before {
-  left: 0;
-  animation: GTitle 3s forwards;
-  transform-origin: left; /* 设置变换原点为左侧 */
-  animation-duration: 2s;
-  background-color: rgb(70, 70, 70);
-}
-.groupmove2::before {
-  right: 0;
-  animation: GTitle 3s forwards;
-  transform-origin: right; /* 设置变换原点为左侧 */
-  animation-duration: 2s;
-  background-color: rgb(73, 53, 255);
+
+.groupmove, .groupmove2 {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
 }
 
-@keyframes GTitle {
-  0% {
-    transform: scaleX(0);
-    border-radius: 0 200px 200px 0;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  50% {
-    border-radius: 0 200px 200px 0;
-  }
-  100% {
-    transform: scaleX(1);
-    border-radius: 0 0 0 0;
-  }
-}
-@keyframes GTitle2 {
-  0% {
-    transform: scaleX(0);
-    border-radius: 0 200px 200px 0;
-  }
-  50% {
-    border-radius: 0 200px 200px 0;
-  }
-  100% {
-    transform: scaleX(1);
-    border-radius: 0 0 0 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
   width: 80vw;
   margin: 0 auto;
-  justify-content: space-around;
 }
-/* .card-container2 {
-    display: flex;
-    flex-wrap: nowrap; 防止換行
-    overflow-x: auto; 橫向滾動
-    避免最後一個卡片被遮擋
-  } */
+
 .swiper {
   width: 80vw;
   height: 100%;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 60px;
+}
+
+:deep(.swiper-wrapper) {
+  align-items: stretch;
+}
+
+:deep(.swiper-slide) {
+  height: auto;
+}
+
+:deep(.swiper-pagination-bullets) {
+  bottom: 0px !important;
 }
 
 .card {
-  width: 30%;
-  min-width: 300px;
-  margin: 30px 0;
-  margin-right: 30px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  transition: box-shadow 0.3s linear;
-  animation: card 3s forwards;
-  animation-duration: 2s;
+  width: 100%;
+  margin: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  background-color: var(--card-bg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--card-shadow);
+  animation: card 0.8s forwards;
+  
   a {
-    color: #000;
+    color: var(--text-primary);
     text-decoration: none;
     outline: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
+
   &:hover {
-    box-shadow:
-      rgba(0, 0, 0, 0.15) 0px 15px 25px,
-      rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  }
-}
-.card-body {
-  padding: 10px;
-}
-.card-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-.title_type {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.card-title {
-  margin: 0;
-  font-size: 32px;
-  line-height: 50px;
-  margin-bottom: 10px;
-}
-.card-Typebox {
-  display: flex;
-  .card-type {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: bold;
-  }
-  .card-typeitem {
-    color: red;
-    font-size: 18px;
-    padding: 0px 5px;
-    line-height: 28px;
-    border: 1px solid green;
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+
+    .card-img {
+      transform: scale(1.05);
+    }
   }
 }
 
-.card-intrbox {
-  width: 100%;
-  padding: 5px;
-  h3 {
-    font-size: 24px;
-    margin-bottom: 5px;
-    line-height: 30px;
-  }
-  .card-info {
-    text-indent: 50px;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-    letter-spacing: 5px;
-  }
-}
 @keyframes card {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .card-imgbox {
   width: 100%;
   position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--card-border);
+  
+  .card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
   .card-typeitem2 {
     position: absolute;
-    bottom: 20px;
-    font-weight: 600;
-    right: 20px;
-    color: rgb(255, 255, 255);
-    background-color: #277988;
-    font-size: 18px;
-    padding: 0px 5px;
-    line-height: 28px;
+    bottom: 12px;
+    right: 12px;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--brand-color-transparent);
+    backdrop-filter: blur(4px);
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 }
 
 .card-intrbox2 {
-  width: 80%;
-  margin: auto;
-  margin: 30px auto;
-  padding: 5px;
-  position: relative;
-  border: 2px solid #000;
-  .card-info {
-    text-indent: 50px;
-    padding: 10px;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    text-align: left;
-    height: 200px;
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: var(--card-bg);
+
   .card-title2 {
-    font-size: 32px;
-    position: absolute;
-    padding: 0px 10px;
-    top: -20px;
-    left: 10px;
-    background-color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .card-info {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-weight: 400;
+    text-indent: 0;
+    padding: 0;
+    margin: 0;
+    padding-right: 8px; /* space for scrollbar */
+    
+    /* Fixed height for perfectly uniform cards with sleek vertical scroll */
+    height: 72px;
+    overflow-y: auto;
+    
+    /* Thin custom scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--brand-color-transparent) transparent;
+    
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--brand-color-transparent);
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: var(--brand-color);
+    }
   }
 }
-@media (max-width: 768px) {
-  .card-container {
-    width: 100vw;
-    .card {
-      width: 100%;
-      margin: 30px 0;
-      border: 1px solid #ccc;
-      display: flex;
-      flex-direction: column;
-      a {
-        display: flex;
-        flex-direction: column;
-      }
-      &:hover,
-      &:active {
-        .card-infobox {
-          display: block;
-        }
-      }
-    }
-    .card-imgbox {
-      width: 100%;
-      .card-img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 10px;
-        object-fit: contain;
-      }
-    }
 
-    .card-intrbox2 {
-      width: 95%;
-      margin: 5px auto;
-      padding: 0px;
-      .card-info {
-        padding: 10px 5px;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        font-weight: 700;
-        height: 150px;
-        overflow-y: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      .card-title2 {
-        font-size: 2rem;
-        color: #277988;
-      }
-    }
-    .card-info {
-      background-color: #fff;
-    }
-    /* transition-timing-function: 5s;
-        transition: opacityinto 5s ease; */
-
-    .opacityIN {
-      opacity: 1;
-      transition: opacityinto 5s ease-in;
-    }
-    @keyframes opacityinto {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  }
-  .group {
-    width: 90%;
-  }
-}
+/* Mobile queries moved to bottom of file */
 
 .checkbox-wrapper-63 input[type="checkbox"] {
   visibility: hidden;
@@ -591,21 +518,21 @@ export default {
 
 .tag-item {
   padding: 6px 15px;
-  border: 1px solid #277988;
+  border: 1px solid var(--brand-color);
   border-radius: 20px;
   cursor: pointer;
-  color: #277988;
+  color: var(--brand-color);
   transition: all 0.3s;
   font-weight: 600;
   user-select: none;
 }
 
 .tag-item:hover {
-  background-color: rgba(39, 121, 136, 0.1);
+  background-color: var(--brand-color-hover);
 }
 
 .tag-item.active {
-  background-color: #277988;
+  background-color: var(--brand-color);
   color: #fff;
 }
 
@@ -616,5 +543,40 @@ export default {
   text-decoration: underline;
   cursor: pointer;
   font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .card-container, .swiper, .group, .btn_box, .tag-filter-container {
+    width: 90vw;
+  }
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+    gap: 15px;
+  }
+  .card-intrbox2 {
+    padding: 16px;
+    .card-title2 {
+      font-size: 18px;
+    }
+  }
+  .tag-filter-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--brand-color-transparent) transparent;
+  }
+  .tag-filter-container::-webkit-scrollbar {
+    height: 4px;
+  }
+  .tag-filter-container::-webkit-scrollbar-thumb {
+    background-color: var(--brand-color-transparent);
+    border-radius: 4px;
+  }
+  .tag-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
 }
 </style>
