@@ -290,22 +290,32 @@ onUnmounted(() => {
     min-height: 100vh;
   }
   .card-container {
-    width: 80%;
-    margin-top: 50px;
+    width: 90%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
   }
   .card2 {
-    width: 80%;
-    margin: 5% 10%;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .card2 a {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
   }
   .SVGclore {
     width: 100%;
     height: 100%;
+    max-width: 55px;
+    max-height: 55px;
     filter: brightness(0) invert(1);
     opacity: 0.75;
   }
